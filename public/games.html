@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orendor Arcade – Spiele</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="glass-card header">
+        <div>
+          <h1>Online Spiele Lounge</h1>
+          <p id="userInfo"></p>
+        </div>
+        <button id="logoutBtn" class="ghost">Logout</button>
+      </header>
+
+      <section class="glass-card">
+        <div class="section-header">
+          <h2>Über 100 Spiele direkt online</h2>
+          <input id="search" type="search" placeholder="Spiel suchen..." />
+        </div>
+        <div id="gameCount" class="game-count"></div>
+        <div id="gamesGrid" class="games-grid"></div>
+      </section>
+    </main>
+    <script type="module" src="games.js"></script>
+  </body>
+</html>
