@@ -13,6 +13,14 @@ const IDEAS = [
 
 const MODES = ['reaction', 'memory', 'aim', 'math', 'sequence'];
 
+const MODE_OBJECTIVE = {
+  reaction: 'Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.',
+  memory: 'Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.',
+  aim: 'Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.',
+  math: 'Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.',
+  sequence: 'Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.'
+};
+
 const FIXED_USER = {
   id: 1,
   username: 'Test67',
@@ -45,17 +53,20 @@ function pickDimension(title, index) {
 function buildGames() {
   return IDEAS.map((title, index) => {
     const id = index + 1;
-    const mode = MODES[index % MODES.length];
+    const type = MODES[index % MODES.length];
     const slug = `${id.toString().padStart(2, '0')}-${slugify(title)}`;
     const dimension = pickDimension(title, index);
+    const difficulty = (index % 10) + 1;
+
     return {
       id,
       slug,
       title,
-      type: mode,
+      type,
       dimension,
-      difficulty: (index % 10) + 1,
-      description: `${dimension} ${mode.toUpperCase()} · ${title}`,
+      difficulty,
+      objective: MODE_OBJECTIVE[type],
+      description: `${dimension} ${type.toUpperCase()} · ${title}`,
       coverImage: `/assets/covers/${slug}.svg`,
       playPath: `/play/${slug}.html`
     };

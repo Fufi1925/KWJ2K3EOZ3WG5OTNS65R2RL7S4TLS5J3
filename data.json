@@ -3,8 +3,8 @@
     {
       "id": 1,
       "username": "Test67",
-      "passwordHash": "84083109375f90d9e934b2cf19b2af86:4a8840ccc16d25e9d2913ed647fb0d3128d372d1bca7d687cbd53f605a11b2e3814119f701825469c033d59896e2a4314a2a6955b33c893c0224729a6e306d3d",
-      "createdAt": "2026-02-25T18:45:19.475Z"
+      "passwordHash": "4a868a307a2e5dacb632d2d5605f61b1:5bb968bc226de33465c1fdcadb22b437088b1ebf2a65cf3bce5378155b1b6cfc1e8e53f8d661095411e6d493e944c6272bbce22a98e727c212e5ec803cd0d706",
+      "createdAt": "2026-02-25T19:11:17.823Z"
     }
   ],
   "games": [
@@ -15,6 +15,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 1,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Pixel-Krieger",
       "coverImage": "/assets/covers/01-pixel-krieger.svg",
       "playPath": "/play/01-pixel-krieger.html"
@@ -26,6 +27,7 @@
       "type": "memory",
       "dimension": "3D",
       "difficulty": 2,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "3D MEMORY · Zombie-Turmverteidiger",
       "coverImage": "/assets/covers/02-zombie-turmverteidiger.svg",
       "playPath": "/play/02-zombie-turmverteidiger.html"
@@ -37,6 +39,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 3,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Laser-Rettung",
       "coverImage": "/assets/covers/03-laser-rettung.svg",
       "playPath": "/play/03-laser-rettung.html"
@@ -48,6 +51,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 4,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Dschungel-Runner",
       "coverImage": "/assets/covers/04-dschungel-runner.svg",
       "playPath": "/play/04-dschungel-runner.html"
@@ -59,6 +63,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 5,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Cyberpunk-Shooter",
       "coverImage": "/assets/covers/05-cyberpunk-shooter.svg",
       "playPath": "/play/05-cyberpunk-shooter.html"
@@ -70,6 +75,7 @@
       "type": "reaction",
       "dimension": "2D",
       "difficulty": 6,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "2D REACTION · Meteor-Schlacht",
       "coverImage": "/assets/covers/06-meteor-schlacht.svg",
       "playPath": "/play/06-meteor-schlacht.html"
@@ -81,6 +87,7 @@
       "type": "memory",
       "dimension": "3D",
       "difficulty": 7,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "3D MEMORY · Drachen-Reiter",
       "coverImage": "/assets/covers/07-drachen-reiter.svg",
       "playPath": "/play/07-drachen-reiter.html"
@@ -92,6 +99,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 8,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Geisterjäger",
       "coverImage": "/assets/covers/08-geisterjaeger.svg",
       "playPath": "/play/08-geisterjaeger.html"
@@ -103,6 +111,7 @@
       "type": "math",
       "dimension": "2D",
       "difficulty": 9,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "2D MATH · Ninja-Springer",
       "coverImage": "/assets/covers/09-ninja-springer.svg",
       "playPath": "/play/09-ninja-springer.html"
@@ -114,6 +123,7 @@
       "type": "sequence",
       "dimension": "3D",
       "difficulty": 10,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "3D SEQUENCE · Arena-Kämpfer",
       "coverImage": "/assets/covers/10-arena-kaempfer.svg",
       "playPath": "/play/10-arena-kaempfer.html"
@@ -125,6 +135,7 @@
       "type": "reaction",
       "dimension": "2D",
       "difficulty": 1,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "2D REACTION · Explosions-Ritter",
       "coverImage": "/assets/covers/11-explosions-ritter.svg",
       "playPath": "/play/11-explosions-ritter.html"
@@ -136,6 +147,7 @@
       "type": "memory",
       "dimension": "2D",
       "difficulty": 2,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "2D MEMORY · Schwertmagier",
       "coverImage": "/assets/covers/12-schwertmagier.svg",
       "playPath": "/play/12-schwertmagier.html"
@@ -147,6 +159,7 @@
       "type": "aim",
       "dimension": "3D",
       "difficulty": 3,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "3D AIM · Eis-Boss-Battle",
       "coverImage": "/assets/covers/13-eis-boss-battle.svg",
       "playPath": "/play/13-eis-boss-battle.html"
@@ -158,6 +171,7 @@
       "type": "math",
       "dimension": "2D",
       "difficulty": 4,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "2D MATH · Mutanten-Krieger",
       "coverImage": "/assets/covers/14-mutanten-krieger.svg",
       "playPath": "/play/14-mutanten-krieger.html"
@@ -169,6 +183,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 5,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Wasser-Pistolenkampf",
       "coverImage": "/assets/covers/15-wasser-pistolenkampf.svg",
       "playPath": "/play/15-wasser-pistolenkampf.html"
@@ -180,6 +195,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 6,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Weltraum-Retter",
       "coverImage": "/assets/covers/16-weltraum-retter.svg",
       "playPath": "/play/16-weltraum-retter.html"
@@ -191,6 +207,7 @@
       "type": "memory",
       "dimension": "3D",
       "difficulty": 7,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "3D MEMORY · Vulkan-Survival",
       "coverImage": "/assets/covers/17-vulkan-survival.svg",
       "playPath": "/play/17-vulkan-survival.html"
@@ -202,6 +219,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 8,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Flammen-Zauberer",
       "coverImage": "/assets/covers/18-flammen-zauberer.svg",
       "playPath": "/play/18-flammen-zauberer.html"
@@ -213,6 +231,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 9,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Sternen-Pilot",
       "coverImage": "/assets/covers/19-sternen-pilot.svg",
       "playPath": "/play/19-sternen-pilot.html"
@@ -224,6 +243,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 10,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Robo-Kriegsführung",
       "coverImage": "/assets/covers/20-robo-kriegsfuehrung.svg",
       "playPath": "/play/20-robo-kriegsfuehrung.html"
@@ -235,6 +255,7 @@
       "type": "reaction",
       "dimension": "2D",
       "difficulty": 1,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "2D REACTION · Kampf der Gladiatoren",
       "coverImage": "/assets/covers/21-kampf-der-gladiatoren.svg",
       "playPath": "/play/21-kampf-der-gladiatoren.html"
@@ -246,6 +267,7 @@
       "type": "memory",
       "dimension": "3D",
       "difficulty": 2,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "3D MEMORY · Dämonenjäger",
       "coverImage": "/assets/covers/22-daemonenjaeger.svg",
       "playPath": "/play/22-daemonenjaeger.html"
@@ -257,6 +279,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 3,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Schlangenkrieger",
       "coverImage": "/assets/covers/23-schlangenkrieger.svg",
       "playPath": "/play/23-schlangenkrieger.html"
@@ -268,6 +291,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 4,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Turbo-Racer Shooter",
       "coverImage": "/assets/covers/24-turbo-racer-shooter.svg",
       "playPath": "/play/24-turbo-racer-shooter.html"
@@ -279,6 +303,7 @@
       "type": "sequence",
       "dimension": "3D",
       "difficulty": 5,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "3D SEQUENCE · Katapult-Belagerung",
       "coverImage": "/assets/covers/25-katapult-belagerung.svg",
       "playPath": "/play/25-katapult-belagerung.html"
@@ -290,6 +315,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 6,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Meteoriten-Survival",
       "coverImage": "/assets/covers/26-meteoriten-survival.svg",
       "playPath": "/play/26-meteoriten-survival.html"
@@ -301,6 +327,7 @@
       "type": "memory",
       "dimension": "2D",
       "difficulty": 7,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "2D MEMORY · Ritterlauf",
       "coverImage": "/assets/covers/27-ritterlauf.svg",
       "playPath": "/play/27-ritterlauf.html"
@@ -312,6 +339,7 @@
       "type": "aim",
       "dimension": "3D",
       "difficulty": 8,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "3D AIM · Stealth-Agent",
       "coverImage": "/assets/covers/28-stealth-agent.svg",
       "playPath": "/play/28-stealth-agent.html"
@@ -323,6 +351,7 @@
       "type": "math",
       "dimension": "2D",
       "difficulty": 9,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "2D MATH · Monsterjäger 2D",
       "coverImage": "/assets/covers/29-monsterjaeger-2d.svg",
       "playPath": "/play/29-monsterjaeger-2d.html"
@@ -334,6 +363,7 @@
       "type": "sequence",
       "dimension": "3D",
       "difficulty": 10,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "3D SEQUENCE · Hindernis-Labyrinth",
       "coverImage": "/assets/covers/30-hindernis-labyrinth.svg",
       "playPath": "/play/30-hindernis-labyrinth.html"
@@ -345,6 +375,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 1,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Laser-Kampfzone",
       "coverImage": "/assets/covers/31-laser-kampfzone.svg",
       "playPath": "/play/31-laser-kampfzone.html"
@@ -356,6 +387,7 @@
       "type": "memory",
       "dimension": "2D",
       "difficulty": 2,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "2D MEMORY · Sturm-Reiter",
       "coverImage": "/assets/covers/32-sturm-reiter.svg",
       "playPath": "/play/32-sturm-reiter.html"
@@ -367,6 +399,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 3,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Explosions-Kettenreaktion",
       "coverImage": "/assets/covers/33-explosions-kettenreaktion.svg",
       "playPath": "/play/33-explosions-kettenreaktion.html"
@@ -378,6 +411,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 4,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Vampirjäger",
       "coverImage": "/assets/covers/34-vampirjaeger.svg",
       "playPath": "/play/34-vampirjaeger.html"
@@ -389,6 +423,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 5,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Magische Festung",
       "coverImage": "/assets/covers/35-magische-festung.svg",
       "playPath": "/play/35-magische-festung.html"
@@ -400,6 +435,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 6,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Luftschiff-Battle",
       "coverImage": "/assets/covers/36-luftschiff-battle.svg",
       "playPath": "/play/36-luftschiff-battle.html"
@@ -411,6 +447,7 @@
       "type": "memory",
       "dimension": "3D",
       "difficulty": 7,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "3D MEMORY · Schießstand Challenge",
       "coverImage": "/assets/covers/37-schiessstand-challenge.svg",
       "playPath": "/play/37-schiessstand-challenge.html"
@@ -422,6 +459,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 8,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Roboter-Kampfturnier",
       "coverImage": "/assets/covers/38-roboter-kampfturnier.svg",
       "playPath": "/play/38-roboter-kampfturnier.html"
@@ -433,6 +471,7 @@
       "type": "math",
       "dimension": "2D",
       "difficulty": 9,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "2D MATH · Tornado-Jäger",
       "coverImage": "/assets/covers/39-tornado-jaeger.svg",
       "playPath": "/play/39-tornado-jaeger.html"
@@ -444,6 +483,7 @@
       "type": "sequence",
       "dimension": "3D",
       "difficulty": 10,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "3D SEQUENCE · Blitz Ninja",
       "coverImage": "/assets/covers/40-blitz-ninja.svg",
       "playPath": "/play/40-blitz-ninja.html"
@@ -455,6 +495,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 1,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Monster-Kart",
       "coverImage": "/assets/covers/41-monster-kart.svg",
       "playPath": "/play/41-monster-kart.html"
@@ -466,6 +507,7 @@
       "type": "memory",
       "dimension": "2D",
       "difficulty": 2,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "2D MEMORY · Alien-Invasion Defense",
       "coverImage": "/assets/covers/42-alien-invasion-defense.svg",
       "playPath": "/play/42-alien-invasion-defense.html"
@@ -477,6 +519,7 @@
       "type": "aim",
       "dimension": "3D",
       "difficulty": 3,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "3D AIM · Spiegel-Labyrinth",
       "coverImage": "/assets/covers/43-spiegel-labyrinth.svg",
       "playPath": "/play/43-spiegel-labyrinth.html"
@@ -488,6 +531,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 4,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Laser-Labyrinth",
       "coverImage": "/assets/covers/44-laser-labyrinth.svg",
       "playPath": "/play/44-laser-labyrinth.html"
@@ -499,6 +543,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 5,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Schwert vs Laser",
       "coverImage": "/assets/covers/45-schwert-vs-laser.svg",
       "playPath": "/play/45-schwert-vs-laser.html"
@@ -510,6 +555,7 @@
       "type": "reaction",
       "dimension": "3D",
       "difficulty": 6,
+      "objective": "Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.",
       "description": "3D REACTION · Schleuder-Helden",
       "coverImage": "/assets/covers/46-schleuder-helden.svg",
       "playPath": "/play/46-schleuder-helden.html"
@@ -521,6 +567,7 @@
       "type": "memory",
       "dimension": "2D",
       "difficulty": 7,
+      "objective": "Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.",
       "description": "2D MEMORY · Eiszeit-Abenteuer",
       "coverImage": "/assets/covers/47-eiszeit-abenteuer.svg",
       "playPath": "/play/47-eiszeit-abenteuer.html"
@@ -532,6 +579,7 @@
       "type": "aim",
       "dimension": "2D",
       "difficulty": 8,
+      "objective": "Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.",
       "description": "2D AIM · Zeitreise-Kämpfer",
       "coverImage": "/assets/covers/48-zeitreise-kaempfer.svg",
       "playPath": "/play/48-zeitreise-kaempfer.html"
@@ -543,6 +591,7 @@
       "type": "math",
       "dimension": "3D",
       "difficulty": 9,
+      "objective": "Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.",
       "description": "3D MATH · Geheime Mission",
       "coverImage": "/assets/covers/49-geheime-mission.svg",
       "playPath": "/play/49-geheime-mission.html"
@@ -554,6 +603,7 @@
       "type": "sequence",
       "dimension": "2D",
       "difficulty": 10,
+      "objective": "Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.",
       "description": "2D SEQUENCE · Explosion Mania",
       "coverImage": "/assets/covers/50-explosion-mania.svg",
       "playPath": "/play/50-explosion-mania.html"

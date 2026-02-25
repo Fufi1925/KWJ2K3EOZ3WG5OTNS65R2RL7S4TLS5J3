@@ -37,3 +37,6 @@ button.ghost { width: auto; background: #fff; color: var(--text); border: 1px so
 .genre { color: var(--muted); font-size: .88rem; margin-bottom: .25rem; }
 .play-btn { width: 100%; }
 @media (max-width: 780px) { .header, .header-left, .section-header { flex-direction: column; align-items: flex-start; } }
+
+.login-hero { background: linear-gradient(135deg, #ffffff, #eef2ff); }
+.login-points { margin: 0 0 1rem; padding-left: 1.1rem; color: var(--muted); display: grid; gap: .25rem; }

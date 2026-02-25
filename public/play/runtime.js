@@ -6,6 +6,8 @@ const type = document.body.dataset.type;
 const difficulty = Number(document.body.dataset.difficulty || 1);
 const title = document.body.dataset.title || 'Spiel';
 const dimension = document.body.dataset.dimension || '2D';
+const cover = document.body.dataset.cover || '';
+const objective = document.body.dataset.objective || '';
 
 meta.textContent = `${title} · ${dimension} · ${type} · Schwierigkeit ${difficulty}`;
 back.onclick = () => {
@@ -14,6 +16,25 @@ back.onclick = () => {
 
 function rand(max) {
   return Math.floor(Math.random() * max);
+}
+
+function endScreen(text) {
+  stage.insertAdjacentHTML('beforeend', `<div class="end-panel"><p>${text}</p><button id="replayBtn" type="button">Nochmal spielen</button></div>`);
+  document.getElementById('replayBtn').onclick = () => showStartScreen();
+}
+
+function showStartScreen() {
+  stage.innerHTML = `
+    <div class="start-screen">
+      <img class="start-cover" src="${cover}" alt="${title}" />
+      <div class="start-info">
+        <h2>${title}</h2>
+        <p>${objective}</p>
+        <button id="startBtn" type="button">▶ Play</button>
+      </div>
+    </div>
+  `;
+  document.getElementById('startBtn').onclick = () => runGame();
 }
 
 function render3DChallenge() {
@@ -74,7 +95,7 @@ function render3DChallenge() {
     for (const o of obstacles) {
       if (o.z < 0.12 && o.z > 0.02 && o.lane === player.lane) {
         over = true;
-        stage.insertAdjacentHTML('beforeend', '<p class="bad">Game Over – versuche es erneut.</p>');
+        endScreen('Game Over – versuche es erneut.');
       }
     }
 
@@ -85,7 +106,7 @@ function render3DChallenge() {
         document.getElementById('score3d').textContent = `Score: ${score}`;
         if (score >= 10 + difficulty) {
           over = true;
-          stage.insertAdjacentHTML('beforeend', '<p class="ok">Gewonnen!</p>');
+          endScreen('Gewonnen! Stark gefahren.');
         }
       }
     }
@@ -121,7 +142,7 @@ function reaction() {
     if (!e.target.classList.contains('on')) return;
     score += 1;
     document.getElementById('score').textContent = `Score ${score}/${target}`;
-    if (score >= target) return stage.insertAdjacentHTML('beforeend', '<p class="ok">Gewonnen!</p>');
+    if (score >= target) return endScreen('Gewonnen! Reaktionsspiel geschafft.');
     next();
   };
   next();
@@ -140,7 +161,7 @@ function aim() {
   dot.onclick = () => {
     score += 1;
     document.getElementById('score').textContent = `Treffer ${score}/${target}`;
-    if (score >= target) return stage.insertAdjacentHTML('beforeend', '<p class="ok">Stark!</p>');
+    if (score >= target) return endScreen('Trefferziel erreicht!');
     move();
   };
   move();
@@ -154,6 +175,9 @@ function math() {
   document.getElementById('ok').onclick = () => {
     const n = Number(document.getElementById('ans').value);
     document.getElementById('res').textContent = n === a + b ? 'Richtig ✅' : 'Falsch';
+    if (n === a + b) {
+      setTimeout(() => endScreen('Richtige Antwort! Nochmal?'), 250);
+    }
   };
 }
 
@@ -181,7 +205,7 @@ function memory() {
         b.classList.add('d');
         first = null;
         found += 1;
-        if (found === pairs) document.getElementById('res').textContent = 'Alle Paare gefunden';
+        if (found === pairs) endScreen('Alle Paare gefunden!');
         return;
       }
       lock = true;
@@ -204,13 +228,20 @@ function sequence() {
     const arr = document.getElementById('inp').value.split(/[-,\s]+/).map(Number).filter(Boolean);
     const ok = arr.length === seq.length && arr.every((n, i) => n === seq[i]);
     document.getElementById('res').textContent = ok ? 'Perfekt!' : `Falsch (${seq.join('-')})`;
+    if (ok) setTimeout(() => endScreen('Sequenz gemeistert!'), 250);
   };
 }
 
-if (dimension === '3D') {
-  render3DChallenge();
-} else if (type === 'reaction') reaction();
-else if (type === 'aim') aim();
-else if (type === 'math') math();
-else if (type === 'memory') memory();
-else sequence();
+function runGame() {
+  if (dimension === '3D') {
+    render3DChallenge();
+    return;
+  }
+  if (type === 'reaction') return reaction();
+  if (type === 'aim') return aim();
+  if (type === 'math') return math();
+  if (type === 'memory') return memory();
+  return sequence();
+}
+
+showStartScreen();
