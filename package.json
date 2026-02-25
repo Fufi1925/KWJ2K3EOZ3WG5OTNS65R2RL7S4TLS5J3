@@ -1,0 +1,12 @@
+{
+  "name": "glass-arcade-platform",
+  "version": "1.0.0",
+  "description": "Modern glassmorphism login + arcade platform with 100+ online games",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  }
+}
