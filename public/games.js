@@ -28,7 +28,6 @@ function renderReaction(game) {
 
   const grid = document.getElementById('miniGrid');
   let score = 0;
-
   for (let i = 0; i < 16; i += 1) {
     const btn = document.createElement('button');
     btn.className = 'mini-btn';
@@ -44,7 +43,7 @@ function renderReaction(game) {
     randomItem(cells).classList.add('active');
   }
 
-  grid.addEventListener('click', (event) => {
+  grid.onclick = (event) => {
     if (!event.target.classList.contains('active')) return;
     score += 1;
     document.getElementById('score').textContent = `Score: ${score} / ${target}`;
@@ -53,7 +52,7 @@ function renderReaction(game) {
       return;
     }
     next();
-  });
+  };
 
   next();
 }
@@ -77,7 +76,7 @@ function renderAim(game) {
     dot.style.top = `${y}px`;
   }
 
-  dot.addEventListener('click', () => {
+  dot.onclick = () => {
     score += 1;
     document.getElementById('score').textContent = `Treffer: ${score} / ${target}`;
     if (score >= target) {
@@ -85,7 +84,7 @@ function renderAim(game) {
       return;
     }
     moveDot();
-  });
+  };
 
   moveDot();
 }
@@ -100,10 +99,10 @@ function renderMath(game) {
     `<p>Löse: <strong>${a} + ${b}</strong></p><input id="answer" type="number" /><button id="check" type="button">Prüfen</button><p id="result"></p>`
   );
 
-  document.getElementById('check').addEventListener('click', () => {
+  document.getElementById('check').onclick = () => {
     const val = Number(document.getElementById('answer').value);
     document.getElementById('result').textContent = val === a + b ? 'Richtig ✅' : 'Leider falsch';
-  });
+  };
 }
 
 function renderMemory(game) {
@@ -129,7 +128,7 @@ function renderMemory(game) {
     card.dataset.value = String(value);
     card.textContent = '?';
 
-    card.addEventListener('click', () => {
+    card.onclick = () => {
       if (lock || card.classList.contains('done') || card === first) return;
       card.textContent = value;
 
@@ -154,7 +153,7 @@ function renderMemory(game) {
         first = null;
         lock = false;
       }, 550);
-    });
+    };
 
     memory.appendChild(card);
   });
@@ -170,7 +169,7 @@ function renderSequence(game) {
     `<p>Merke dir die Folge: <strong>${seq.join(' - ')}</strong></p><p>Tippe sie ein (z.B. 1-2-3)</p><input id="seqInput" /><button id="seqCheck" type="button">Prüfen</button><p id="seqResult"></p>`
   );
 
-  document.getElementById('seqCheck').addEventListener('click', () => {
+  document.getElementById('seqCheck').onclick = () => {
     const user = document
       .getElementById('seqInput')
       .value.split(/[-,\s]+/)
@@ -178,10 +177,11 @@ function renderSequence(game) {
       .filter(Boolean);
     const ok = user.length === seq.length && user.every((n, i) => n === seq[i]);
     document.getElementById('seqResult').textContent = ok ? 'Perfekt!' : `Nicht ganz. Folge war ${seq.join('-')}`;
-  });
+  };
 }
 
 function launchGame(game) {
+  if (!game) return;
   if (game.type === 'reaction') return renderReaction(game);
   if (game.type === 'memory') return renderMemory(game);
   if (game.type === 'aim') return renderAim(game);
@@ -189,21 +189,29 @@ function launchGame(game) {
   return renderSequence(game);
 }
 
+function gameIcon(type) {
+  if (type === 'reaction') return '⚡';
+  if (type === 'memory') return '🧠';
+  if (type === 'aim') return '🎯';
+  if (type === 'math') return '➕';
+  return '🔢';
+}
+
 function render(games) {
   gameCount.textContent = `${games.length} Spiele verfügbar`;
   gamesGrid.innerHTML = games
     .map(
-      (game) => `<article class="game-card"><h3>${game.title}</h3><div class="genre">${game.description}</div><button class="play-btn" data-id="${game.id}" type="button">Jetzt spielen</button></article>`
+      (game) => `<article class="game-card"><div class="game-cover">${gameIcon(game.type)} ${game.type.toUpperCase()}</div><h3>${game.title}</h3><div class="genre">${game.description}</div><button class="play-btn" data-id="${game.id}" type="button">Jetzt spielen</button></article>`
     )
     .join('');
 }
 
-gamesGrid.addEventListener('click', (event) => {
+gamesGrid.onclick = (event) => {
   const button = event.target.closest('.play-btn');
   if (!button) return;
   const game = allGames.find((g) => g.id === Number(button.dataset.id));
-  if (game) launchGame(game);
-});
+  launchGame(game);
+};
 
 search.addEventListener('input', () => {
   const term = search.value.toLowerCase().trim();
@@ -227,10 +235,7 @@ async function boot() {
   const data = await gamesRes.json();
   allGames = data.games;
   render(allGames);
-
-  if (allGames.length > 0) {
-    launchGame(allGames[0]);
-  }
+  launchGame(allGames[0]);
 }
 
 boot();
