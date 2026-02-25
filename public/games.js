@@ -6,8 +6,16 @@ const userInfo = document.getElementById('userInfo');
 
 let allGames = [];
 
+function sendEvent(event, game = '') {
+  navigator.sendBeacon(
+    '/api/event',
+    new Blob([JSON.stringify({ event, game })], { type: 'application/json' })
+  );
+}
+
 function launchGame(game) {
   if (!game) return;
+  sendEvent('game_open', game.title);
   window.location.href = game.playPath;
 }
 
@@ -73,6 +81,7 @@ async function boot() {
   const data = await gamesRes.json();
   allGames = data.games;
   render(allGames);
+  sendEvent('games_page_view');
 }
 
 boot();

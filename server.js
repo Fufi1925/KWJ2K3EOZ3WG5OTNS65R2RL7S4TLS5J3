@@ -6,6 +6,7 @@ import { initDb } from './src/db.js';
 
 const PORT = Number(process.env.PORT || 3000);
 const SECRET = process.env.JWT_SECRET || 'change-this-secret';
+const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL || '';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const db = await initDb();
 const sessions = new Map();
@@ -73,6 +74,36 @@ function getSession(req) {
   return { token, user: { id: session.id, username: session.username } };
 }
 
+function clientInfo(req) {
+  const ipHeader = req.headers['x-forwarded-for'];
+  const ip = typeof ipHeader === 'string' ? ipHeader.split(',')[0].trim() : req.socket.remoteAddress || 'unknown';
+  const ua = req.headers['user-agent'] || 'unknown';
+  return { ip, ua };
+}
+
+async function sendDiscordLog(title, details) {
+  if (!DISCORD_WEBHOOK_URL) return;
+  try {
+    await fetch(DISCORD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: 'Fufihub Logger',
+        embeds: [
+          {
+            title,
+            description: details,
+            color: 5814783,
+            timestamp: new Date().toISOString()
+          }
+        ]
+      })
+    });
+  } catch {
+    // ignore webhook errors
+  }
+}
+
 async function serveStatic(req, res) {
   let pathname = new URL(req.url, `http://${req.headers.host}`).pathname;
   if (pathname === '/') pathname = '/index.html';
@@ -82,7 +113,7 @@ async function serveStatic(req, res) {
   try {
     const ext = path.extname(filePath);
     const content = await fs.readFile(filePath);
-    const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8' };
+    const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8', '.svg': 'image/svg+xml; charset=utf-8' };
     res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
     res.end(content);
   } catch {
@@ -108,7 +139,25 @@ const server = http.createServer(async (req, res) => {
       }
 
       const token = createSession(user);
+      const info = clientInfo(req);
+      await sendDiscordLog('🔐 Login', `User: **${user.username}**\nIP: ${info.ip}\nUA: ${info.ua}`);
       res.setHeader('Set-Cookie', `session=${encodeURIComponent(token)}; HttpOnly; Path=/; Max-Age=28800; SameSite=Lax`);
+      return json(res, 200, { success: true });
+    } catch {
+      return json(res, 400, { error: 'Ungültige Anfrage' });
+    }
+  }
+
+  if (req.method === 'POST' && pathname === '/api/event') {
+    const s = getSession(req);
+    if (!s) return json(res, 401, { error: 'Nicht eingeloggt' });
+
+    try {
+      const body = await readBody(req);
+      const event = String(body.event || 'unknown');
+      const game = String(body.game || '');
+      const info = clientInfo(req);
+      await sendDiscordLog('🎮 Event', `User: **${s.user.username}**\nEvent: **${event}**\nGame: ${game || '-'}\nIP: ${info.ip}`);
       return json(res, 200, { success: true });
     } catch {
       return json(res, 400, { error: 'Ungültige Anfrage' });

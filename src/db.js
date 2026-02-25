@@ -11,16 +11,6 @@ const IDEAS = [
   'Monster-Kart','Alien-Invasion Defense','Spiegel-Labyrinth','Laser-Labyrinth','Schwert vs Laser','Schleuder-Helden','Eiszeit-Abenteuer','Zeitreise-Kämpfer','Geheime Mission','Explosion Mania'
 ];
 
-const MODES = ['reaction', 'memory', 'aim', 'math', 'sequence'];
-
-const MODE_OBJECTIVE = {
-  reaction: 'Reaktions-Action: Triff schnell aktive Ziele und weiche Risiken aus.',
-  memory: 'Taktik & Puzzle: Finde Muster, kombiniere Karten und löse Erinnerungsrätsel.',
-  aim: 'Shooter-Fokus: Ziele präzise, triggere Combos und halte den Druck hoch.',
-  math: 'Skill + Logik: Rechne schnell und nutze Entscheidungen für Vorteile.',
-  sequence: 'Rhythmus & Planung: Merke Sequenzen und führe sie fehlerfrei aus.'
-};
-
 const FIXED_USER = {
   id: 1,
   username: 'Test67',
@@ -44,16 +34,34 @@ function slugify(input) {
     .replace(/^-+|-+$/g, '');
 }
 
+function pickType(title) {
+  const t = title.toLowerCase();
+  if (t.includes('shooter') || t.includes('laser') || t.includes('schieß') || t.includes('schwert vs laser')) return 'aim';
+  if (t.includes('labyrinth') || t.includes('mission') || t.includes('runner') || t.includes('survival')) return 'sequence';
+  if (t.includes('kart') || t.includes('racer') || t.includes('pilot') || t.includes('reiter') || t.includes('weltraum')) return 'reaction';
+  if (t.includes('puzzle') || t.includes('spiegel') || t.includes('tower') || t.includes('turm')) return 'memory';
+  return 'math';
+}
+
 function pickDimension(title, index) {
-  const threeDHints = ['Labyrinth', 'Turm', 'Racer', 'Kart', 'Battle', 'Arena', 'Kampfzone', 'Survival'];
-  if (threeDHints.some((h) => title.includes(h))) return '3D';
+  const threeDHints = ['labyrinth', 'turm', 'racer', 'kart', 'battle', 'arena', 'kampfzone', 'survival', 'shooter'];
+  const t = title.toLowerCase();
+  if (threeDHints.some((h) => t.includes(h))) return '3D';
   return index % 3 === 0 ? '3D' : '2D';
+}
+
+function objectiveFor(type, title) {
+  if (type === 'aim') return `Shooter-Gameplay für ${title}: präzise zielen, Gegner treffen, Schaden vermeiden.`;
+  if (type === 'sequence') return `${title}: Routen, Muster und Timing meistern, um das Ziel zu erreichen.`;
+  if (type === 'reaction') return `${title}: schnelle Bewegung, Ausweichen und perfektes Timing sind entscheidend.`;
+  if (type === 'memory') return `${title}: strategisch planen, Muster erkennen und clever reagieren.`;
+  return `${title}: Ressourcen, Skill und Entscheidungen kombinieren, um zu gewinnen.`;
 }
 
 function buildGames() {
   return IDEAS.map((title, index) => {
     const id = index + 1;
-    const type = MODES[index % MODES.length];
+    const type = pickType(title);
     const slug = `${id.toString().padStart(2, '0')}-${slugify(title)}`;
     const dimension = pickDimension(title, index);
     const difficulty = (index % 10) + 1;
@@ -65,7 +73,7 @@ function buildGames() {
       type,
       dimension,
       difficulty,
-      objective: MODE_OBJECTIVE[type],
+      objective: objectiveFor(type, title),
       description: `${dimension} ${type.toUpperCase()} · ${title}`,
       coverImage: `/assets/covers/${slug}.svg`,
       playPath: `/play/${slug}.html`

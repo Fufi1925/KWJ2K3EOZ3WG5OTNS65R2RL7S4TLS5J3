@@ -18,9 +18,16 @@ function rand(max) {
   return Math.floor(Math.random() * max);
 }
 
+function logEvent(eventName, extra = '') {
+  navigator.sendBeacon(
+    '/api/event',
+    new Blob([JSON.stringify({ event: eventName, game: `${title}${extra ? ` (${extra})` : ''}` })], { type: 'application/json' })
+  );
+}
+
 function endScreen(text) {
   stage.insertAdjacentHTML('beforeend', `<div class="end-panel"><p>${text}</p><button id="replayBtn" type="button">Nochmal spielen</button></div>`);
-  document.getElementById('replayBtn').onclick = () => showStartScreen();
+  document.getElementById('replayBtn').onclick = () => { logEvent('game_replay'); showStartScreen(); };
 }
 
 function showStartScreen() {
@@ -34,7 +41,7 @@ function showStartScreen() {
       </div>
     </div>
   `;
-  document.getElementById('startBtn').onclick = () => runGame();
+  document.getElementById('startBtn').onclick = () => { logEvent('game_start'); runGame(); };
 }
 
 function render3DChallenge() {
