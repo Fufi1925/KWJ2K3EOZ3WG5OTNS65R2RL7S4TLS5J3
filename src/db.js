@@ -1,31 +1,32 @@
 import { promises as fs } from 'node:fs';
-import crypto from 'node:crypto';
 
-const DB_PATH = './data.json';
+const DB_PATH = process.env.DB_PATH || './data.json';
+
+const gameFamilies = [
+  { type: 'reaction', title: 'Reaction Grid' },
+  { type: 'memory', title: 'Memory Flip' },
+  { type: 'aim', title: 'Aim Trainer' },
+  { type: 'math', title: 'Math Rush' },
+  { type: 'sequence', title: 'Sequence Tap' }
+];
 
 function buildGames() {
   const games = [];
-  const bases = ['https://www.crazygames.com/game/', 'https://poki.com/en/g/', 'https://www.miniclip.com/games/'];
-  for (let i = 1; i <= 120; i += 1) {
-    games.push({
-      id: i,
-      title: `Game ${i}`,
-      genre: ['Action', 'Puzzle', 'Racing', 'Arcade'][i % 4],
-      url: `${bases[i % bases.length]}demo-${i}`
-    });
+  let id = 1;
+  for (const family of gameFamilies) {
+    for (let level = 1; level <= 24; level += 1) {
+      games.push({
+        id,
+        slug: `${family.type}-${level}`,
+        title: `${family.title} ${level}`,
+        type: family.type,
+        difficulty: level,
+        description: `Level ${level} - spiele direkt auf der Seite.`
+      });
+      id += 1;
+    }
   }
   return games;
-}
-
-function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
-  const hash = crypto.pbkdf2Sync(password, salt, 100000, 64, 'sha512').toString('hex');
-  return `${salt}:${hash}`;
-}
-
-function verifyPassword(password, stored) {
-  const [salt, originalHash] = stored.split(':');
-  const hash = crypto.pbkdf2Sync(password, salt, 100000, 64, 'sha512').toString('hex');
-  return crypto.timingSafeEqual(Buffer.from(hash), Buffer.from(originalHash));
 }
 
 async function writeDb(db) {
@@ -35,41 +36,32 @@ async function writeDb(db) {
 export async function initDb() {
   let db;
   try {
-    const raw = await fs.readFile(DB_PATH, 'utf8');
-    db = JSON.parse(raw);
+    db = JSON.parse(await fs.readFile(DB_PATH, 'utf8'));
   } catch {
     db = { users: [], games: [] };
   }
 
   if (!Array.isArray(db.users)) db.users = [];
-  if (!Array.isArray(db.games)) db.games = [];
-
-  const hasDemo = db.users.some((u) => u.email === 'demo@arcade.com');
-  if (!hasDemo) {
-    db.users.push({
-      id: 1,
-      email: 'demo@arcade.com',
-      passwordHash: hashPassword('Demo1234!'),
-      createdAt: new Date().toISOString()
-    });
-  }
-
-  if (db.games.length < 100) {
-    db.games = buildGames();
-  }
+  if (!Array.isArray(db.games) || db.games.length < 100) db.games = buildGames();
 
   await writeDb(db);
 
   return {
+    async allUsers() {
+      return db.users;
+    },
     async findUserByEmail(email) {
       return db.users.find((u) => u.email === email) || null;
     },
+    async addUser(user) {
+      const nextId = db.users.length ? Math.max(...db.users.map((u) => u.id)) + 1 : 1;
+      const entry = { id: nextId, ...user, createdAt: new Date().toISOString() };
+      db.users.push(entry);
+      await writeDb(db);
+      return entry;
+    },
     async getGames() {
       return db.games;
-    },
-    verifyPassword,
-    async save() {
-      await writeDb(db);
     }
   };
 }

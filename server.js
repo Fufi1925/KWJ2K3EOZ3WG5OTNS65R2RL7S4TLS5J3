@@ -5,10 +5,9 @@ import crypto from 'node:crypto';
 import { initDb } from './src/db.js';
 
 const PORT = Number(process.env.PORT || 3000);
-const SECRET = process.env.JWT_SECRET || 'super-secret-key-change-me';
+const SECRET = process.env.JWT_SECRET || 'change-this-secret';
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const db = await initDb();
-
 const sessions = new Map();
 
 function json(res, status, payload) {
@@ -17,33 +16,43 @@ function json(res, status, payload) {
 }
 
 function parseCookies(req) {
-  const header = req.headers.cookie || '';
+  const raw = req.headers.cookie || '';
   return Object.fromEntries(
-    header
+    raw
       .split(';')
-      .map((part) => part.trim())
+      .map((p) => p.trim())
       .filter(Boolean)
-      .map((pair) => {
-        const i = pair.indexOf('=');
-        return [pair.slice(0, i), decodeURIComponent(pair.slice(i + 1))];
+      .map((p) => {
+        const i = p.indexOf('=');
+        return [p.slice(0, i), decodeURIComponent(p.slice(i + 1))];
       })
   );
 }
 
+function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
+  const hash = crypto.pbkdf2Sync(password, salt, 120000, 64, 'sha512').toString('hex');
+  return `${salt}:${hash}`;
+}
+
+function verifyPassword(password, stored) {
+  const [salt, original] = String(stored).split(':');
+  if (!salt || !original) return false;
+  const hash = crypto.pbkdf2Sync(password, salt, 120000, 64, 'sha512').toString('hex');
+  return crypto.timingSafeEqual(Buffer.from(hash), Buffer.from(original));
+}
+
 function readBody(req) {
   return new Promise((resolve, reject) => {
-    let data = '';
+    let body = '';
     req.on('data', (chunk) => {
-      data += chunk;
-      if (data.length > 1_000_000) {
-        reject(new Error('Body too large'));
-      }
+      body += chunk;
+      if (body.length > 1_000_000) reject(new Error('too large'));
     });
     req.on('end', () => {
       try {
-        resolve(data ? JSON.parse(data) : {});
+        resolve(body ? JSON.parse(body) : {});
       } catch {
-        reject(new Error('Invalid JSON'));
+        reject(new Error('invalid json'));
       }
     });
     req.on('error', reject);
@@ -51,16 +60,15 @@ function readBody(req) {
 }
 
 function createSession(user) {
-  const random = crypto.randomBytes(32).toString('hex');
-  const signature = crypto.createHmac('sha256', SECRET).update(random).digest('hex');
-  const token = `${random}.${signature}`;
+  const raw = crypto.randomBytes(32).toString('hex');
+  const sig = crypto.createHmac('sha256', SECRET).update(raw).digest('hex');
+  const token = `${raw}.${sig}`;
   sessions.set(token, { id: user.id, email: user.email, expires: Date.now() + 8 * 60 * 60 * 1000 });
   return token;
 }
 
 function getSession(req) {
-  const cookies = parseCookies(req);
-  const token = cookies.session;
+  const token = parseCookies(req).session;
   const session = token ? sessions.get(token) : null;
   if (!session) return null;
   if (session.expires < Date.now()) {
@@ -74,21 +82,13 @@ async function serveStatic(req, res) {
   let pathname = new URL(req.url, `http://${req.headers.host}`).pathname;
   if (pathname === '/') pathname = '/index.html';
   const filePath = path.join(PUBLIC_DIR, pathname);
-  if (!filePath.startsWith(PUBLIC_DIR)) {
-    res.writeHead(403);
-    res.end('Forbidden');
-    return;
-  }
+  if (!filePath.startsWith(PUBLIC_DIR)) return json(res, 403, { error: 'Forbidden' });
 
   try {
     const ext = path.extname(filePath);
-    const map = {
-      '.html': 'text/html; charset=utf-8',
-      '.css': 'text/css; charset=utf-8',
-      '.js': 'application/javascript; charset=utf-8'
-    };
     const content = await fs.readFile(filePath);
-    res.writeHead(200, { 'Content-Type': map[ext] || 'application/octet-stream' });
+    const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'application/javascript; charset=utf-8' };
+    res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
     res.end(content);
   } catch {
     res.writeHead(404);
@@ -99,8 +99,24 @@ async function serveStatic(req, res) {
 const server = http.createServer(async (req, res) => {
   const { pathname } = new URL(req.url, `http://${req.headers.host}`);
 
-  if (req.method === 'GET' && pathname === '/api/health') {
-    return json(res, 200, { status: 'ok' });
+  if (req.method === 'GET' && pathname === '/api/health') return json(res, 200, { status: 'ok' });
+
+  if (req.method === 'POST' && pathname === '/api/register') {
+    try {
+      const body = await readBody(req);
+      const email = String(body.email || '').trim().toLowerCase();
+      const password = String(body.password || '');
+      if (!email.includes('@') || password.length < 8) {
+        return json(res, 400, { error: 'Bitte gültige E-Mail und Passwort (mind. 8 Zeichen) nutzen.' });
+      }
+      if (await db.findUserByEmail(email)) return json(res, 409, { error: 'E-Mail existiert bereits.' });
+      const user = await db.addUser({ email, passwordHash: hashPassword(password) });
+      const token = createSession(user);
+      res.setHeader('Set-Cookie', `session=${encodeURIComponent(token)}; HttpOnly; Path=/; Max-Age=28800; SameSite=Lax`);
+      return json(res, 201, { success: true });
+    } catch {
+      return json(res, 400, { error: 'Ungültige Anfrage' });
+    }
   }
 
   if (req.method === 'POST' && pathname === '/api/login') {
@@ -108,13 +124,8 @@ const server = http.createServer(async (req, res) => {
       const body = await readBody(req);
       const email = String(body.email || '').trim().toLowerCase();
       const password = String(body.password || '');
-      if (!email || !password) return json(res, 400, { error: 'E-Mail und Passwort sind erforderlich.' });
-
       const user = await db.findUserByEmail(email);
-      if (!user || !db.verifyPassword(password, user.passwordHash)) {
-        return json(res, 401, { error: 'Login fehlgeschlagen.' });
-      }
-
+      if (!user || !verifyPassword(password, user.passwordHash)) return json(res, 401, { error: 'Login fehlgeschlagen.' });
       const token = createSession(user);
       res.setHeader('Set-Cookie', `session=${encodeURIComponent(token)}; HttpOnly; Path=/; Max-Age=28800; SameSite=Lax`);
       return json(res, 200, { success: true });
@@ -124,23 +135,22 @@ const server = http.createServer(async (req, res) => {
   }
 
   if (req.method === 'POST' && pathname === '/api/logout') {
-    const session = getSession(req);
-    if (session) sessions.delete(session.token);
+    const s = getSession(req);
+    if (s) sessions.delete(s.token);
     res.setHeader('Set-Cookie', 'session=; HttpOnly; Path=/; Max-Age=0; SameSite=Lax');
     return json(res, 200, { success: true });
   }
 
   if (req.method === 'GET' && pathname === '/api/me') {
-    const session = getSession(req);
-    if (!session) return json(res, 401, { error: 'Nicht eingeloggt' });
-    return json(res, 200, { user: session.user });
+    const s = getSession(req);
+    if (!s) return json(res, 401, { error: 'Nicht eingeloggt' });
+    return json(res, 200, { user: s.user });
   }
 
   if (req.method === 'GET' && pathname === '/api/games') {
-    const session = getSession(req);
-    if (!session) return json(res, 401, { error: 'Nicht eingeloggt' });
-    const games = await db.getGames();
-    return json(res, 200, { games });
+    const s = getSession(req);
+    if (!s) return json(res, 401, { error: 'Nicht eingeloggt' });
+    return json(res, 200, { games: await db.getGames() });
   }
 
   return serveStatic(req, res);

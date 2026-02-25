@@ -3,22 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orendor Glass Arcade</title>
+    <title>Orendor Arena - Login</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page page-center">
-      <section class="glass-card login-card">
-        <h1>Orendor Arcade</h1>
-        <p class="subtitle">Black Glass Login – modern, schnell, sicher.</p>
-        <form id="loginForm">
+      <section class="glass-card auth-card">
+        <h1>Orendor Arena</h1>
+        <p class="subtitle">Echte Accounts, echte In-Page Games, kein Weiterleiten auf andere Seiten.</p>
+
+        <div class="auth-switch">
+          <button id="loginTab" class="tab active" type="button">Login</button>
+          <button id="registerTab" class="tab" type="button">Registrieren</button>
+        </div>
+
+        <form id="authForm">
           <label for="email">E-Mail</label>
-          <input id="email" name="email" type="email" value="demo@arcade.com" required />
+          <input id="email" name="email" type="email" placeholder="dein@email.de" required />
 
           <label for="password">Passwort</label>
-          <input id="password" name="password" type="password" value="Demo1234!" required />
+          <input id="password" name="password" type="password" placeholder="mind. 8 Zeichen" required minlength="8" />
 
-          <button type="submit">Einloggen</button>
+          <button id="submitBtn" type="submit">Einloggen</button>
           <p id="message" class="message"></p>
         </form>
       </section>

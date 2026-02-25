@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orendor Arcade – Spiele</title>
+    <title>Orendor Arena - Spiele</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page">
       <header class="glass-card header">
         <div>
-          <h1>Online Spiele Lounge</h1>
+          <h1>Orendor Game Hub</h1>
           <p id="userInfo"></p>
         </div>
         <button id="logoutBtn" class="ghost">Logout</button>
@@ -18,11 +18,21 @@
 
       <section class="glass-card">
         <div class="section-header">
-          <h2>Über 100 Spiele direkt online</h2>
+          <h2>120 eigene Spiele direkt auf deiner Website</h2>
           <input id="search" type="search" placeholder="Spiel suchen..." />
         </div>
         <div id="gameCount" class="game-count"></div>
         <div id="gamesGrid" class="games-grid"></div>
+      </section>
+
+      <section class="glass-card game-stage-wrap">
+        <div class="stage-top">
+          <h2 id="stageTitle">Wähle ein Spiel</h2>
+          <div id="stageMeta" class="game-count"></div>
+        </div>
+        <div id="stage" class="game-stage">
+          <p>Klicke oben auf „Jetzt spielen“ bei einem Spiel.</p>
+        </div>
       </section>
     </main>
     <script type="module" src="games.js"></script>

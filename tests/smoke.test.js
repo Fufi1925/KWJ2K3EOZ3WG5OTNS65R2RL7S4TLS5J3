@@ -1,8 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
+import os from 'node:os';
+import path from 'node:path';
+import { promises as fs } from 'node:fs';
 
 const PORT = 3199;
+const TEST_DB = path.join(os.tmpdir(), `orendor-test-${Date.now()}.json`);
 let server;
 
 function waitForServer() {
@@ -20,13 +24,14 @@ function waitForServer() {
 
 test.before(async () => {
   server = spawn('node', ['server.js'], {
-    env: { ...process.env, PORT: String(PORT), JWT_SECRET: 'test-secret' }
+    env: { ...process.env, PORT: String(PORT), JWT_SECRET: 'test-secret', DB_PATH: TEST_DB }
   });
   await waitForServer();
 });
 
-test.after(() => {
+test.after(async () => {
   server.kill('SIGTERM');
+  await fs.rm(TEST_DB, { force: true });
 });
 
 test('health endpoint works', async () => {
@@ -34,11 +39,21 @@ test('health endpoint works', async () => {
   assert.equal(response.status, 200);
 });
 
-test('login and games endpoint work', async () => {
+test('register, login and games endpoint work', async () => {
+  const email = `user${Date.now()}@example.com`;
+  const password = 'Sicher1234!';
+
+  const registerRes = await fetch(`http://127.0.0.1:${PORT}/api/register`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+  assert.equal(registerRes.status, 201);
+
   const loginRes = await fetch(`http://127.0.0.1:${PORT}/api/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email: 'demo@arcade.com', password: 'Demo1234!' })
+    body: JSON.stringify({ email, password })
   });
 
   assert.equal(loginRes.status, 200);
@@ -53,4 +68,5 @@ test('login and games endpoint work', async () => {
   const payload = await gamesRes.json();
   assert.ok(Array.isArray(payload.games));
   assert.ok(payload.games.length >= 100);
+  assert.ok(payload.games.every((g) => !('url' in g)));
 });
