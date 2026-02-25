@@ -3,8 +3,8 @@
     {
       "id": 1,
       "username": "Test67",
-      "passwordHash": "2fecbc0a181463030dfb6a5ce4df89a0:f5850dea9211e44c2ccde045d1f222e8482697c59a12349e82d0addab0dbf42162d6e956d26e2f486d5f61361cef3b5cd247494f03301f78d9fe988be202e611",
-      "createdAt": "2026-02-25T17:35:32.089Z"
+      "passwordHash": "f5972aace60cecf70a7d1826d212be20:5a93059fa5b9ddca4a6d21b23aca21ee8dca38f7229d453213af1d6ec9e8e3c93f54725958c2d2c5d0b484751f57ecb888eea58d9fded075148e7559ea01e385",
+      "createdAt": "2026-02-25T18:03:28.101Z"
     }
   ],
   "games": [
@@ -14,7 +14,9 @@
       "title": "Neon Click 1",
       "type": "reaction",
       "difficulty": 1,
-      "description": "Neon Click · Schwierigkeit 1"
+      "description": "Neon Click · Schwierigkeit 1",
+      "coverImage": "/assets/covers/reaction-1.svg",
+      "playPath": "/play/reaction-1.html"
     },
     {
       "id": 2,
@@ -22,7 +24,9 @@
       "title": "Blitz Reflex 2",
       "type": "reaction",
       "difficulty": 2,
-      "description": "Blitz Reflex · Schwierigkeit 2"
+      "description": "Blitz Reflex · Schwierigkeit 2",
+      "coverImage": "/assets/covers/reaction-2.svg",
+      "playPath": "/play/reaction-2.html"
     },
     {
       "id": 3,
@@ -30,7 +34,9 @@
       "title": "Pulse Tap 3",
       "type": "reaction",
       "difficulty": 3,
-      "description": "Pulse Tap · Schwierigkeit 3"
+      "description": "Pulse Tap · Schwierigkeit 3",
+      "coverImage": "/assets/covers/reaction-3.svg",
+      "playPath": "/play/reaction-3.html"
     },
     {
       "id": 4,
@@ -38,7 +44,9 @@
       "title": "Quick Pixel 4",
       "type": "reaction",
       "difficulty": 4,
-      "description": "Quick Pixel · Schwierigkeit 4"
+      "description": "Quick Pixel · Schwierigkeit 4",
+      "coverImage": "/assets/covers/reaction-4.svg",
+      "playPath": "/play/reaction-4.html"
     },
     {
       "id": 5,
@@ -46,7 +54,9 @@
       "title": "Turbo Finger 5",
       "type": "reaction",
       "difficulty": 5,
-      "description": "Turbo Finger · Schwierigkeit 5"
+      "description": "Turbo Finger · Schwierigkeit 5",
+      "coverImage": "/assets/covers/reaction-5.svg",
+      "playPath": "/play/reaction-5.html"
     },
     {
       "id": 6,
@@ -54,7 +64,9 @@
       "title": "Neon Click 6",
       "type": "reaction",
       "difficulty": 6,
-      "description": "Neon Click · Schwierigkeit 6"
+      "description": "Neon Click · Schwierigkeit 6",
+      "coverImage": "/assets/covers/reaction-6.svg",
+      "playPath": "/play/reaction-6.html"
     },
     {
       "id": 7,
@@ -62,7 +74,9 @@
       "title": "Blitz Reflex 7",
       "type": "reaction",
       "difficulty": 7,
-      "description": "Blitz Reflex · Schwierigkeit 7"
+      "description": "Blitz Reflex · Schwierigkeit 7",
+      "coverImage": "/assets/covers/reaction-7.svg",
+      "playPath": "/play/reaction-7.html"
     },
     {
       "id": 8,
@@ -70,7 +84,9 @@
       "title": "Pulse Tap 8",
       "type": "reaction",
       "difficulty": 8,
-      "description": "Pulse Tap · Schwierigkeit 8"
+      "description": "Pulse Tap · Schwierigkeit 8",
+      "coverImage": "/assets/covers/reaction-8.svg",
+      "playPath": "/play/reaction-8.html"
     },
     {
       "id": 9,
@@ -78,7 +94,9 @@
       "title": "Quick Pixel 9",
       "type": "reaction",
       "difficulty": 9,
-      "description": "Quick Pixel · Schwierigkeit 9"
+      "description": "Quick Pixel · Schwierigkeit 9",
+      "coverImage": "/assets/covers/reaction-9.svg",
+      "playPath": "/play/reaction-9.html"
     },
     {
       "id": 10,
@@ -86,7 +104,9 @@
       "title": "Turbo Finger 10",
       "type": "reaction",
       "difficulty": 10,
-      "description": "Turbo Finger · Schwierigkeit 10"
+      "description": "Turbo Finger · Schwierigkeit 10",
+      "coverImage": "/assets/covers/reaction-10.svg",
+      "playPath": "/play/reaction-10.html"
     },
     {
       "id": 11,
@@ -94,7 +114,9 @@
       "title": "Neon Click 11",
       "type": "reaction",
       "difficulty": 11,
-      "description": "Neon Click · Schwierigkeit 11"
+      "description": "Neon Click · Schwierigkeit 11",
+      "coverImage": "/assets/covers/reaction-11.svg",
+      "playPath": "/play/reaction-11.html"
     },
     {
       "id": 12,
@@ -102,7 +124,9 @@
       "title": "Blitz Reflex 12",
       "type": "reaction",
       "difficulty": 12,
-      "description": "Blitz Reflex · Schwierigkeit 12"
+      "description": "Blitz Reflex · Schwierigkeit 12",
+      "coverImage": "/assets/covers/reaction-12.svg",
+      "playPath": "/play/reaction-12.html"
     },
     {
       "id": 13,
@@ -110,7 +134,9 @@
       "title": "Pulse Tap 13",
       "type": "reaction",
       "difficulty": 13,
-      "description": "Pulse Tap · Schwierigkeit 13"
+      "description": "Pulse Tap · Schwierigkeit 13",
+      "coverImage": "/assets/covers/reaction-13.svg",
+      "playPath": "/play/reaction-13.html"
     },
     {
       "id": 14,
@@ -118,7 +144,9 @@
       "title": "Quick Pixel 14",
       "type": "reaction",
       "difficulty": 14,
-      "description": "Quick Pixel · Schwierigkeit 14"
+      "description": "Quick Pixel · Schwierigkeit 14",
+      "coverImage": "/assets/covers/reaction-14.svg",
+      "playPath": "/play/reaction-14.html"
     },
     {
       "id": 15,
@@ -126,7 +154,9 @@
       "title": "Turbo Finger 15",
       "type": "reaction",
       "difficulty": 15,
-      "description": "Turbo Finger · Schwierigkeit 15"
+      "description": "Turbo Finger · Schwierigkeit 15",
+      "coverImage": "/assets/covers/reaction-15.svg",
+      "playPath": "/play/reaction-15.html"
     },
     {
       "id": 16,
@@ -134,7 +164,9 @@
       "title": "Neon Click 16",
       "type": "reaction",
       "difficulty": 16,
-      "description": "Neon Click · Schwierigkeit 16"
+      "description": "Neon Click · Schwierigkeit 16",
+      "coverImage": "/assets/covers/reaction-16.svg",
+      "playPath": "/play/reaction-16.html"
     },
     {
       "id": 17,
@@ -142,7 +174,9 @@
       "title": "Blitz Reflex 17",
       "type": "reaction",
       "difficulty": 17,
-      "description": "Blitz Reflex · Schwierigkeit 17"
+      "description": "Blitz Reflex · Schwierigkeit 17",
+      "coverImage": "/assets/covers/reaction-17.svg",
+      "playPath": "/play/reaction-17.html"
     },
     {
       "id": 18,
@@ -150,7 +184,9 @@
       "title": "Pulse Tap 18",
       "type": "reaction",
       "difficulty": 18,
-      "description": "Pulse Tap · Schwierigkeit 18"
+      "description": "Pulse Tap · Schwierigkeit 18",
+      "coverImage": "/assets/covers/reaction-18.svg",
+      "playPath": "/play/reaction-18.html"
     },
     {
       "id": 19,
@@ -158,7 +194,9 @@
       "title": "Quick Pixel 19",
       "type": "reaction",
       "difficulty": 19,
-      "description": "Quick Pixel · Schwierigkeit 19"
+      "description": "Quick Pixel · Schwierigkeit 19",
+      "coverImage": "/assets/covers/reaction-19.svg",
+      "playPath": "/play/reaction-19.html"
     },
     {
       "id": 20,
@@ -166,7 +204,9 @@
       "title": "Turbo Finger 20",
       "type": "reaction",
       "difficulty": 20,
-      "description": "Turbo Finger · Schwierigkeit 20"
+      "description": "Turbo Finger · Schwierigkeit 20",
+      "coverImage": "/assets/covers/reaction-20.svg",
+      "playPath": "/play/reaction-20.html"
     },
     {
       "id": 21,
@@ -174,7 +214,9 @@
       "title": "Neon Click 21",
       "type": "reaction",
       "difficulty": 21,
-      "description": "Neon Click · Schwierigkeit 21"
+      "description": "Neon Click · Schwierigkeit 21",
+      "coverImage": "/assets/covers/reaction-21.svg",
+      "playPath": "/play/reaction-21.html"
     },
     {
       "id": 22,
@@ -182,7 +224,9 @@
       "title": "Blitz Reflex 22",
       "type": "reaction",
       "difficulty": 22,
-      "description": "Blitz Reflex · Schwierigkeit 22"
+      "description": "Blitz Reflex · Schwierigkeit 22",
+      "coverImage": "/assets/covers/reaction-22.svg",
+      "playPath": "/play/reaction-22.html"
     },
     {
       "id": 23,
@@ -190,7 +234,9 @@
       "title": "Pulse Tap 23",
       "type": "reaction",
       "difficulty": 23,
-      "description": "Pulse Tap · Schwierigkeit 23"
+      "description": "Pulse Tap · Schwierigkeit 23",
+      "coverImage": "/assets/covers/reaction-23.svg",
+      "playPath": "/play/reaction-23.html"
     },
     {
       "id": 24,
@@ -198,7 +244,9 @@
       "title": "Quick Pixel 24",
       "type": "reaction",
       "difficulty": 24,
-      "description": "Quick Pixel · Schwierigkeit 24"
+      "description": "Quick Pixel · Schwierigkeit 24",
+      "coverImage": "/assets/covers/reaction-24.svg",
+      "playPath": "/play/reaction-24.html"
     },
     {
       "id": 25,
@@ -206,7 +254,9 @@
       "title": "Card Recall 1",
       "type": "memory",
       "difficulty": 1,
-      "description": "Card Recall · Schwierigkeit 1"
+      "description": "Card Recall · Schwierigkeit 1",
+      "coverImage": "/assets/covers/memory-1.svg",
+      "playPath": "/play/memory-1.html"
     },
     {
       "id": 26,
@@ -214,7 +264,9 @@
       "title": "Mind Mirror 2",
       "type": "memory",
       "difficulty": 2,
-      "description": "Mind Mirror · Schwierigkeit 2"
+      "description": "Mind Mirror · Schwierigkeit 2",
+      "coverImage": "/assets/covers/memory-2.svg",
+      "playPath": "/play/memory-2.html"
     },
     {
       "id": 27,
@@ -222,7 +274,9 @@
       "title": "Twin Hunt 3",
       "type": "memory",
       "difficulty": 3,
-      "description": "Twin Hunt · Schwierigkeit 3"
+      "description": "Twin Hunt · Schwierigkeit 3",
+      "coverImage": "/assets/covers/memory-3.svg",
+      "playPath": "/play/memory-3.html"
     },
     {
       "id": 28,
@@ -230,7 +284,9 @@
       "title": "Echo Pair 4",
       "type": "memory",
       "difficulty": 4,
-      "description": "Echo Pair · Schwierigkeit 4"
+      "description": "Echo Pair · Schwierigkeit 4",
+      "coverImage": "/assets/covers/memory-4.svg",
+      "playPath": "/play/memory-4.html"
     },
     {
       "id": 29,
@@ -238,7 +294,9 @@
       "title": "Memory Storm 5",
       "type": "memory",
       "difficulty": 5,
-      "description": "Memory Storm · Schwierigkeit 5"
+      "description": "Memory Storm · Schwierigkeit 5",
+      "coverImage": "/assets/covers/memory-5.svg",
+      "playPath": "/play/memory-5.html"
     },
     {
       "id": 30,
@@ -246,7 +304,9 @@
       "title": "Card Recall 6",
       "type": "memory",
       "difficulty": 6,
-      "description": "Card Recall · Schwierigkeit 6"
+      "description": "Card Recall · Schwierigkeit 6",
+      "coverImage": "/assets/covers/memory-6.svg",
+      "playPath": "/play/memory-6.html"
     },
     {
       "id": 31,
@@ -254,7 +314,9 @@
       "title": "Mind Mirror 7",
       "type": "memory",
       "difficulty": 7,
-      "description": "Mind Mirror · Schwierigkeit 7"
+      "description": "Mind Mirror · Schwierigkeit 7",
+      "coverImage": "/assets/covers/memory-7.svg",
+      "playPath": "/play/memory-7.html"
     },
     {
       "id": 32,
@@ -262,7 +324,9 @@
       "title": "Twin Hunt 8",
       "type": "memory",
       "difficulty": 8,
-      "description": "Twin Hunt · Schwierigkeit 8"
+      "description": "Twin Hunt · Schwierigkeit 8",
+      "coverImage": "/assets/covers/memory-8.svg",
+      "playPath": "/play/memory-8.html"
     },
     {
       "id": 33,
@@ -270,7 +334,9 @@
       "title": "Echo Pair 9",
       "type": "memory",
       "difficulty": 9,
-      "description": "Echo Pair · Schwierigkeit 9"
+      "description": "Echo Pair · Schwierigkeit 9",
+      "coverImage": "/assets/covers/memory-9.svg",
+      "playPath": "/play/memory-9.html"
     },
     {
       "id": 34,
@@ -278,7 +344,9 @@
       "title": "Memory Storm 10",
       "type": "memory",
       "difficulty": 10,
-      "description": "Memory Storm · Schwierigkeit 10"
+      "description": "Memory Storm · Schwierigkeit 10",
+      "coverImage": "/assets/covers/memory-10.svg",
+      "playPath": "/play/memory-10.html"
     },
     {
       "id": 35,
@@ -286,7 +354,9 @@
       "title": "Card Recall 11",
       "type": "memory",
       "difficulty": 11,
-      "description": "Card Recall · Schwierigkeit 11"
+      "description": "Card Recall · Schwierigkeit 11",
+      "coverImage": "/assets/covers/memory-11.svg",
+      "playPath": "/play/memory-11.html"
     },
     {
       "id": 36,
@@ -294,7 +364,9 @@
       "title": "Mind Mirror 12",
       "type": "memory",
       "difficulty": 12,
-      "description": "Mind Mirror · Schwierigkeit 12"
+      "description": "Mind Mirror · Schwierigkeit 12",
+      "coverImage": "/assets/covers/memory-12.svg",
+      "playPath": "/play/memory-12.html"
     },
     {
       "id": 37,
@@ -302,7 +374,9 @@
       "title": "Twin Hunt 13",
       "type": "memory",
       "difficulty": 13,
-      "description": "Twin Hunt · Schwierigkeit 13"
+      "description": "Twin Hunt · Schwierigkeit 13",
+      "coverImage": "/assets/covers/memory-13.svg",
+      "playPath": "/play/memory-13.html"
     },
     {
       "id": 38,
@@ -310,7 +384,9 @@
       "title": "Echo Pair 14",
       "type": "memory",
       "difficulty": 14,
-      "description": "Echo Pair · Schwierigkeit 14"
+      "description": "Echo Pair · Schwierigkeit 14",
+      "coverImage": "/assets/covers/memory-14.svg",
+      "playPath": "/play/memory-14.html"
     },
     {
       "id": 39,
@@ -318,7 +394,9 @@
       "title": "Memory Storm 15",
       "type": "memory",
       "difficulty": 15,
-      "description": "Memory Storm · Schwierigkeit 15"
+      "description": "Memory Storm · Schwierigkeit 15",
+      "coverImage": "/assets/covers/memory-15.svg",
+      "playPath": "/play/memory-15.html"
     },
     {
       "id": 40,
@@ -326,7 +404,9 @@
       "title": "Card Recall 16",
       "type": "memory",
       "difficulty": 16,
-      "description": "Card Recall · Schwierigkeit 16"
+      "description": "Card Recall · Schwierigkeit 16",
+      "coverImage": "/assets/covers/memory-16.svg",
+      "playPath": "/play/memory-16.html"
     },
     {
       "id": 41,
@@ -334,7 +414,9 @@
       "title": "Mind Mirror 17",
       "type": "memory",
       "difficulty": 17,
-      "description": "Mind Mirror · Schwierigkeit 17"
+      "description": "Mind Mirror · Schwierigkeit 17",
+      "coverImage": "/assets/covers/memory-17.svg",
+      "playPath": "/play/memory-17.html"
     },
     {
       "id": 42,
@@ -342,7 +424,9 @@
       "title": "Twin Hunt 18",
       "type": "memory",
       "difficulty": 18,
-      "description": "Twin Hunt · Schwierigkeit 18"
+      "description": "Twin Hunt · Schwierigkeit 18",
+      "coverImage": "/assets/covers/memory-18.svg",
+      "playPath": "/play/memory-18.html"
     },
     {
       "id": 43,
@@ -350,7 +434,9 @@
       "title": "Echo Pair 19",
       "type": "memory",
       "difficulty": 19,
-      "description": "Echo Pair · Schwierigkeit 19"
+      "description": "Echo Pair · Schwierigkeit 19",
+      "coverImage": "/assets/covers/memory-19.svg",
+      "playPath": "/play/memory-19.html"
     },
     {
       "id": 44,
@@ -358,7 +444,9 @@
       "title": "Memory Storm 20",
       "type": "memory",
       "difficulty": 20,
-      "description": "Memory Storm · Schwierigkeit 20"
+      "description": "Memory Storm · Schwierigkeit 20",
+      "coverImage": "/assets/covers/memory-20.svg",
+      "playPath": "/play/memory-20.html"
     },
     {
       "id": 45,
@@ -366,7 +454,9 @@
       "title": "Card Recall 21",
       "type": "memory",
       "difficulty": 21,
-      "description": "Card Recall · Schwierigkeit 21"
+      "description": "Card Recall · Schwierigkeit 21",
+      "coverImage": "/assets/covers/memory-21.svg",
+      "playPath": "/play/memory-21.html"
     },
     {
       "id": 46,
@@ -374,7 +464,9 @@
       "title": "Mind Mirror 22",
       "type": "memory",
       "difficulty": 22,
-      "description": "Mind Mirror · Schwierigkeit 22"
+      "description": "Mind Mirror · Schwierigkeit 22",
+      "coverImage": "/assets/covers/memory-22.svg",
+      "playPath": "/play/memory-22.html"
     },
     {
       "id": 47,
@@ -382,7 +474,9 @@
       "title": "Twin Hunt 23",
       "type": "memory",
       "difficulty": 23,
-      "description": "Twin Hunt · Schwierigkeit 23"
+      "description": "Twin Hunt · Schwierigkeit 23",
+      "coverImage": "/assets/covers/memory-23.svg",
+      "playPath": "/play/memory-23.html"
     },
     {
       "id": 48,
@@ -390,7 +484,9 @@
       "title": "Echo Pair 24",
       "type": "memory",
       "difficulty": 24,
-      "description": "Echo Pair · Schwierigkeit 24"
+      "description": "Echo Pair · Schwierigkeit 24",
+      "coverImage": "/assets/covers/memory-24.svg",
+      "playPath": "/play/memory-24.html"
     },
     {
       "id": 49,
@@ -398,7 +494,9 @@
       "title": "Dot Hunter 1",
       "type": "aim",
       "difficulty": 1,
-      "description": "Dot Hunter · Schwierigkeit 1"
+      "description": "Dot Hunter · Schwierigkeit 1",
+      "coverImage": "/assets/covers/aim-1.svg",
+      "playPath": "/play/aim-1.html"
     },
     {
       "id": 50,
@@ -406,7 +504,9 @@
       "title": "Sniper Pop 2",
       "type": "aim",
       "difficulty": 2,
-      "description": "Sniper Pop · Schwierigkeit 2"
+      "description": "Sniper Pop · Schwierigkeit 2",
+      "coverImage": "/assets/covers/aim-2.svg",
+      "playPath": "/play/aim-2.html"
     },
     {
       "id": 51,
@@ -414,7 +514,9 @@
       "title": "Target Rush 3",
       "type": "aim",
       "difficulty": 3,
-      "description": "Target Rush · Schwierigkeit 3"
+      "description": "Target Rush · Schwierigkeit 3",
+      "coverImage": "/assets/covers/aim-3.svg",
+      "playPath": "/play/aim-3.html"
     },
     {
       "id": 52,
@@ -422,7 +524,9 @@
       "title": "Aim Pulse 4",
       "type": "aim",
       "difficulty": 4,
-      "description": "Aim Pulse · Schwierigkeit 4"
+      "description": "Aim Pulse · Schwierigkeit 4",
+      "coverImage": "/assets/covers/aim-4.svg",
+      "playPath": "/play/aim-4.html"
     },
     {
       "id": 53,
@@ -430,7 +534,9 @@
       "title": "Focus Shot 5",
       "type": "aim",
       "difficulty": 5,
-      "description": "Focus Shot · Schwierigkeit 5"
+      "description": "Focus Shot · Schwierigkeit 5",
+      "coverImage": "/assets/covers/aim-5.svg",
+      "playPath": "/play/aim-5.html"
     },
     {
       "id": 54,
@@ -438,7 +544,9 @@
       "title": "Dot Hunter 6",
       "type": "aim",
       "difficulty": 6,
-      "description": "Dot Hunter · Schwierigkeit 6"
+      "description": "Dot Hunter · Schwierigkeit 6",
+      "coverImage": "/assets/covers/aim-6.svg",
+      "playPath": "/play/aim-6.html"
     },
     {
       "id": 55,
@@ -446,7 +554,9 @@
       "title": "Sniper Pop 7",
       "type": "aim",
       "difficulty": 7,
-      "description": "Sniper Pop · Schwierigkeit 7"
+      "description": "Sniper Pop · Schwierigkeit 7",
+      "coverImage": "/assets/covers/aim-7.svg",
+      "playPath": "/play/aim-7.html"
     },
     {
       "id": 56,
@@ -454,7 +564,9 @@
       "title": "Target Rush 8",
       "type": "aim",
       "difficulty": 8,
-      "description": "Target Rush · Schwierigkeit 8"
+      "description": "Target Rush · Schwierigkeit 8",
+      "coverImage": "/assets/covers/aim-8.svg",
+      "playPath": "/play/aim-8.html"
     },
     {
       "id": 57,
@@ -462,7 +574,9 @@
       "title": "Aim Pulse 9",
       "type": "aim",
       "difficulty": 9,
-      "description": "Aim Pulse · Schwierigkeit 9"
+      "description": "Aim Pulse · Schwierigkeit 9",
+      "coverImage": "/assets/covers/aim-9.svg",
+      "playPath": "/play/aim-9.html"
     },
     {
       "id": 58,
@@ -470,7 +584,9 @@
       "title": "Focus Shot 10",
       "type": "aim",
       "difficulty": 10,
-      "description": "Focus Shot · Schwierigkeit 10"
+      "description": "Focus Shot · Schwierigkeit 10",
+      "coverImage": "/assets/covers/aim-10.svg",
+      "playPath": "/play/aim-10.html"
     },
     {
       "id": 59,
@@ -478,7 +594,9 @@
       "title": "Dot Hunter 11",
       "type": "aim",
       "difficulty": 11,
-      "description": "Dot Hunter · Schwierigkeit 11"
+      "description": "Dot Hunter · Schwierigkeit 11",
+      "coverImage": "/assets/covers/aim-11.svg",
+      "playPath": "/play/aim-11.html"
     },
     {
       "id": 60,
@@ -486,7 +604,9 @@
       "title": "Sniper Pop 12",
       "type": "aim",
       "difficulty": 12,
-      "description": "Sniper Pop · Schwierigkeit 12"
+      "description": "Sniper Pop · Schwierigkeit 12",
+      "coverImage": "/assets/covers/aim-12.svg",
+      "playPath": "/play/aim-12.html"
     },
     {
       "id": 61,
@@ -494,7 +614,9 @@
       "title": "Target Rush 13",
       "type": "aim",
       "difficulty": 13,
-      "description": "Target Rush · Schwierigkeit 13"
+      "description": "Target Rush · Schwierigkeit 13",
+      "coverImage": "/assets/covers/aim-13.svg",
+      "playPath": "/play/aim-13.html"
     },
     {
       "id": 62,
@@ -502,7 +624,9 @@
       "title": "Aim Pulse 14",
       "type": "aim",
       "difficulty": 14,
-      "description": "Aim Pulse · Schwierigkeit 14"
+      "description": "Aim Pulse · Schwierigkeit 14",
+      "coverImage": "/assets/covers/aim-14.svg",
+      "playPath": "/play/aim-14.html"
     },
     {
       "id": 63,
@@ -510,7 +634,9 @@
       "title": "Focus Shot 15",
       "type": "aim",
       "difficulty": 15,
-      "description": "Focus Shot · Schwierigkeit 15"
+      "description": "Focus Shot · Schwierigkeit 15",
+      "coverImage": "/assets/covers/aim-15.svg",
+      "playPath": "/play/aim-15.html"
     },
     {
       "id": 64,
@@ -518,7 +644,9 @@
       "title": "Dot Hunter 16",
       "type": "aim",
       "difficulty": 16,
-      "description": "Dot Hunter · Schwierigkeit 16"
+      "description": "Dot Hunter · Schwierigkeit 16",
+      "coverImage": "/assets/covers/aim-16.svg",
+      "playPath": "/play/aim-16.html"
     },
     {
       "id": 65,
@@ -526,7 +654,9 @@
       "title": "Sniper Pop 17",
       "type": "aim",
       "difficulty": 17,
-      "description": "Sniper Pop · Schwierigkeit 17"
+      "description": "Sniper Pop · Schwierigkeit 17",
+      "coverImage": "/assets/covers/aim-17.svg",
+      "playPath": "/play/aim-17.html"
     },
     {
       "id": 66,
@@ -534,7 +664,9 @@
       "title": "Target Rush 18",
       "type": "aim",
       "difficulty": 18,
-      "description": "Target Rush · Schwierigkeit 18"
+      "description": "Target Rush · Schwierigkeit 18",
+      "coverImage": "/assets/covers/aim-18.svg",
+      "playPath": "/play/aim-18.html"
     },
     {
       "id": 67,
@@ -542,7 +674,9 @@
       "title": "Aim Pulse 19",
       "type": "aim",
       "difficulty": 19,
-      "description": "Aim Pulse · Schwierigkeit 19"
+      "description": "Aim Pulse · Schwierigkeit 19",
+      "coverImage": "/assets/covers/aim-19.svg",
+      "playPath": "/play/aim-19.html"
     },
     {
       "id": 68,
@@ -550,7 +684,9 @@
       "title": "Focus Shot 20",
       "type": "aim",
       "difficulty": 20,
-      "description": "Focus Shot · Schwierigkeit 20"
+      "description": "Focus Shot · Schwierigkeit 20",
+      "coverImage": "/assets/covers/aim-20.svg",
+      "playPath": "/play/aim-20.html"
     },
     {
       "id": 69,
@@ -558,7 +694,9 @@
       "title": "Dot Hunter 21",
       "type": "aim",
       "difficulty": 21,
-      "description": "Dot Hunter · Schwierigkeit 21"
+      "description": "Dot Hunter · Schwierigkeit 21",
+      "coverImage": "/assets/covers/aim-21.svg",
+      "playPath": "/play/aim-21.html"
     },
     {
       "id": 70,
@@ -566,7 +704,9 @@
       "title": "Sniper Pop 22",
       "type": "aim",
       "difficulty": 22,
-      "description": "Sniper Pop · Schwierigkeit 22"
+      "description": "Sniper Pop · Schwierigkeit 22",
+      "coverImage": "/assets/covers/aim-22.svg",
+      "playPath": "/play/aim-22.html"
     },
     {
       "id": 71,
@@ -574,7 +714,9 @@
       "title": "Target Rush 23",
       "type": "aim",
       "difficulty": 23,
-      "description": "Target Rush · Schwierigkeit 23"
+      "description": "Target Rush · Schwierigkeit 23",
+      "coverImage": "/assets/covers/aim-23.svg",
+      "playPath": "/play/aim-23.html"
     },
     {
       "id": 72,
@@ -582,7 +724,9 @@
       "title": "Aim Pulse 24",
       "type": "aim",
       "difficulty": 24,
-      "description": "Aim Pulse · Schwierigkeit 24"
+      "description": "Aim Pulse · Schwierigkeit 24",
+      "coverImage": "/assets/covers/aim-24.svg",
+      "playPath": "/play/aim-24.html"
     },
     {
       "id": 73,
@@ -590,7 +734,9 @@
       "title": "Zahlen Sprint 1",
       "type": "math",
       "difficulty": 1,
-      "description": "Zahlen Sprint · Schwierigkeit 1"
+      "description": "Zahlen Sprint · Schwierigkeit 1",
+      "coverImage": "/assets/covers/math-1.svg",
+      "playPath": "/play/math-1.html"
     },
     {
       "id": 74,
@@ -598,7 +744,9 @@
       "title": "Plus Master 2",
       "type": "math",
       "difficulty": 2,
-      "description": "Plus Master · Schwierigkeit 2"
+      "description": "Plus Master · Schwierigkeit 2",
+      "coverImage": "/assets/covers/math-2.svg",
+      "playPath": "/play/math-2.html"
     },
     {
       "id": 75,
@@ -606,7 +754,9 @@
       "title": "Brain Calc 3",
       "type": "math",
       "difficulty": 3,
-      "description": "Brain Calc · Schwierigkeit 3"
+      "description": "Brain Calc · Schwierigkeit 3",
+      "coverImage": "/assets/covers/math-3.svg",
+      "playPath": "/play/math-3.html"
     },
     {
       "id": 76,
@@ -614,7 +764,9 @@
       "title": "Rapid Sum 4",
       "type": "math",
       "difficulty": 4,
-      "description": "Rapid Sum · Schwierigkeit 4"
+      "description": "Rapid Sum · Schwierigkeit 4",
+      "coverImage": "/assets/covers/math-4.svg",
+      "playPath": "/play/math-4.html"
     },
     {
       "id": 77,
@@ -622,7 +774,9 @@
       "title": "Logic Count 5",
       "type": "math",
       "difficulty": 5,
-      "description": "Logic Count · Schwierigkeit 5"
+      "description": "Logic Count · Schwierigkeit 5",
+      "coverImage": "/assets/covers/math-5.svg",
+      "playPath": "/play/math-5.html"
     },
     {
       "id": 78,
@@ -630,7 +784,9 @@
       "title": "Zahlen Sprint 6",
       "type": "math",
       "difficulty": 6,
-      "description": "Zahlen Sprint · Schwierigkeit 6"
+      "description": "Zahlen Sprint · Schwierigkeit 6",
+      "coverImage": "/assets/covers/math-6.svg",
+      "playPath": "/play/math-6.html"
     },
     {
       "id": 79,
@@ -638,7 +794,9 @@
       "title": "Plus Master 7",
       "type": "math",
       "difficulty": 7,
-      "description": "Plus Master · Schwierigkeit 7"
+      "description": "Plus Master · Schwierigkeit 7",
+      "coverImage": "/assets/covers/math-7.svg",
+      "playPath": "/play/math-7.html"
     },
     {
       "id": 80,
@@ -646,7 +804,9 @@
       "title": "Brain Calc 8",
       "type": "math",
       "difficulty": 8,
-      "description": "Brain Calc · Schwierigkeit 8"
+      "description": "Brain Calc · Schwierigkeit 8",
+      "coverImage": "/assets/covers/math-8.svg",
+      "playPath": "/play/math-8.html"
     },
     {
       "id": 81,
@@ -654,7 +814,9 @@
       "title": "Rapid Sum 9",
       "type": "math",
       "difficulty": 9,
-      "description": "Rapid Sum · Schwierigkeit 9"
+      "description": "Rapid Sum · Schwierigkeit 9",
+      "coverImage": "/assets/covers/math-9.svg",
+      "playPath": "/play/math-9.html"
     },
     {
       "id": 82,
@@ -662,7 +824,9 @@
       "title": "Logic Count 10",
       "type": "math",
       "difficulty": 10,
-      "description": "Logic Count · Schwierigkeit 10"
+      "description": "Logic Count · Schwierigkeit 10",
+      "coverImage": "/assets/covers/math-10.svg",
+      "playPath": "/play/math-10.html"
     },
     {
       "id": 83,
@@ -670,7 +834,9 @@
       "title": "Zahlen Sprint 11",
       "type": "math",
       "difficulty": 11,
-      "description": "Zahlen Sprint · Schwierigkeit 11"
+      "description": "Zahlen Sprint · Schwierigkeit 11",
+      "coverImage": "/assets/covers/math-11.svg",
+      "playPath": "/play/math-11.html"
     },
     {
       "id": 84,
@@ -678,7 +844,9 @@
       "title": "Plus Master 12",
       "type": "math",
       "difficulty": 12,
-      "description": "Plus Master · Schwierigkeit 12"
+      "description": "Plus Master · Schwierigkeit 12",
+      "coverImage": "/assets/covers/math-12.svg",
+      "playPath": "/play/math-12.html"
     },
     {
       "id": 85,
@@ -686,7 +854,9 @@
       "title": "Brain Calc 13",
       "type": "math",
       "difficulty": 13,
-      "description": "Brain Calc · Schwierigkeit 13"
+      "description": "Brain Calc · Schwierigkeit 13",
+      "coverImage": "/assets/covers/math-13.svg",
+      "playPath": "/play/math-13.html"
     },
     {
       "id": 86,
@@ -694,7 +864,9 @@
       "title": "Rapid Sum 14",
       "type": "math",
       "difficulty": 14,
-      "description": "Rapid Sum · Schwierigkeit 14"
+      "description": "Rapid Sum · Schwierigkeit 14",
+      "coverImage": "/assets/covers/math-14.svg",
+      "playPath": "/play/math-14.html"
     },
     {
       "id": 87,
@@ -702,7 +874,9 @@
       "title": "Logic Count 15",
       "type": "math",
       "difficulty": 15,
-      "description": "Logic Count · Schwierigkeit 15"
+      "description": "Logic Count · Schwierigkeit 15",
+      "coverImage": "/assets/covers/math-15.svg",
+      "playPath": "/play/math-15.html"
     },
     {
       "id": 88,
@@ -710,7 +884,9 @@
       "title": "Zahlen Sprint 16",
       "type": "math",
       "difficulty": 16,
-      "description": "Zahlen Sprint · Schwierigkeit 16"
+      "description": "Zahlen Sprint · Schwierigkeit 16",
+      "coverImage": "/assets/covers/math-16.svg",
+      "playPath": "/play/math-16.html"
     },
     {
       "id": 89,
@@ -718,7 +894,9 @@
       "title": "Plus Master 17",
       "type": "math",
       "difficulty": 17,
-      "description": "Plus Master · Schwierigkeit 17"
+      "description": "Plus Master · Schwierigkeit 17",
+      "coverImage": "/assets/covers/math-17.svg",
+      "playPath": "/play/math-17.html"
     },
     {
       "id": 90,
@@ -726,7 +904,9 @@
       "title": "Brain Calc 18",
       "type": "math",
       "difficulty": 18,
-      "description": "Brain Calc · Schwierigkeit 18"
+      "description": "Brain Calc · Schwierigkeit 18",
+      "coverImage": "/assets/covers/math-18.svg",
+      "playPath": "/play/math-18.html"
     },
     {
       "id": 91,
@@ -734,7 +914,9 @@
       "title": "Rapid Sum 19",
       "type": "math",
       "difficulty": 19,
-      "description": "Rapid Sum · Schwierigkeit 19"
+      "description": "Rapid Sum · Schwierigkeit 19",
+      "coverImage": "/assets/covers/math-19.svg",
+      "playPath": "/play/math-19.html"
     },
     {
       "id": 92,
@@ -742,7 +924,9 @@
       "title": "Logic Count 20",
       "type": "math",
       "difficulty": 20,
-      "description": "Logic Count · Schwierigkeit 20"
+      "description": "Logic Count · Schwierigkeit 20",
+      "coverImage": "/assets/covers/math-20.svg",
+      "playPath": "/play/math-20.html"
     },
     {
       "id": 93,
@@ -750,7 +934,9 @@
       "title": "Zahlen Sprint 21",
       "type": "math",
       "difficulty": 21,
-      "description": "Zahlen Sprint · Schwierigkeit 21"
+      "description": "Zahlen Sprint · Schwierigkeit 21",
+      "coverImage": "/assets/covers/math-21.svg",
+      "playPath": "/play/math-21.html"
     },
     {
       "id": 94,
@@ -758,7 +944,9 @@
       "title": "Plus Master 22",
       "type": "math",
       "difficulty": 22,
-      "description": "Plus Master · Schwierigkeit 22"
+      "description": "Plus Master · Schwierigkeit 22",
+      "coverImage": "/assets/covers/math-22.svg",
+      "playPath": "/play/math-22.html"
     },
     {
       "id": 95,
@@ -766,7 +954,9 @@
       "title": "Brain Calc 23",
       "type": "math",
       "difficulty": 23,
-      "description": "Brain Calc · Schwierigkeit 23"
+      "description": "Brain Calc · Schwierigkeit 23",
+      "coverImage": "/assets/covers/math-23.svg",
+      "playPath": "/play/math-23.html"
     },
     {
       "id": 96,
@@ -774,7 +964,9 @@
       "title": "Rapid Sum 24",
       "type": "math",
       "difficulty": 24,
-      "description": "Rapid Sum · Schwierigkeit 24"
+      "description": "Rapid Sum · Schwierigkeit 24",
+      "coverImage": "/assets/covers/math-24.svg",
+      "playPath": "/play/math-24.html"
     },
     {
       "id": 97,
@@ -782,7 +974,9 @@
       "title": "Pattern Flow 1",
       "type": "sequence",
       "difficulty": 1,
-      "description": "Pattern Flow · Schwierigkeit 1"
+      "description": "Pattern Flow · Schwierigkeit 1",
+      "coverImage": "/assets/covers/sequence-1.svg",
+      "playPath": "/play/sequence-1.html"
     },
     {
       "id": 98,
@@ -790,7 +984,9 @@
       "title": "Code Track 2",
       "type": "sequence",
       "difficulty": 2,
-      "description": "Code Track · Schwierigkeit 2"
+      "description": "Code Track · Schwierigkeit 2",
+      "coverImage": "/assets/covers/sequence-2.svg",
+      "playPath": "/play/sequence-2.html"
     },
     {
       "id": 99,
@@ -798,7 +994,9 @@
       "title": "Signal Chain 3",
       "type": "sequence",
       "difficulty": 3,
-      "description": "Signal Chain · Schwierigkeit 3"
+      "description": "Signal Chain · Schwierigkeit 3",
+      "coverImage": "/assets/covers/sequence-3.svg",
+      "playPath": "/play/sequence-3.html"
     },
     {
       "id": 100,
@@ -806,7 +1004,9 @@
       "title": "Order Lock 4",
       "type": "sequence",
       "difficulty": 4,
-      "description": "Order Lock · Schwierigkeit 4"
+      "description": "Order Lock · Schwierigkeit 4",
+      "coverImage": "/assets/covers/sequence-4.svg",
+      "playPath": "/play/sequence-4.html"
     },
     {
       "id": 101,
@@ -814,7 +1014,9 @@
       "title": "Rhythm Path 5",
       "type": "sequence",
       "difficulty": 5,
-      "description": "Rhythm Path · Schwierigkeit 5"
+      "description": "Rhythm Path · Schwierigkeit 5",
+      "coverImage": "/assets/covers/sequence-5.svg",
+      "playPath": "/play/sequence-5.html"
     },
     {
       "id": 102,
@@ -822,7 +1024,9 @@
       "title": "Pattern Flow 6",
       "type": "sequence",
       "difficulty": 6,
-      "description": "Pattern Flow · Schwierigkeit 6"
+      "description": "Pattern Flow · Schwierigkeit 6",
+      "coverImage": "/assets/covers/sequence-6.svg",
+      "playPath": "/play/sequence-6.html"
     },
     {
       "id": 103,
@@ -830,7 +1034,9 @@
       "title": "Code Track 7",
       "type": "sequence",
       "difficulty": 7,
-      "description": "Code Track · Schwierigkeit 7"
+      "description": "Code Track · Schwierigkeit 7",
+      "coverImage": "/assets/covers/sequence-7.svg",
+      "playPath": "/play/sequence-7.html"
     },
     {
       "id": 104,
@@ -838,7 +1044,9 @@
       "title": "Signal Chain 8",
       "type": "sequence",
       "difficulty": 8,
-      "description": "Signal Chain · Schwierigkeit 8"
+      "description": "Signal Chain · Schwierigkeit 8",
+      "coverImage": "/assets/covers/sequence-8.svg",
+      "playPath": "/play/sequence-8.html"
     },
     {
       "id": 105,
@@ -846,7 +1054,9 @@
       "title": "Order Lock 9",
       "type": "sequence",
       "difficulty": 9,
-      "description": "Order Lock · Schwierigkeit 9"
+      "description": "Order Lock · Schwierigkeit 9",
+      "coverImage": "/assets/covers/sequence-9.svg",
+      "playPath": "/play/sequence-9.html"
     },
     {
       "id": 106,
@@ -854,7 +1064,9 @@
       "title": "Rhythm Path 10",
       "type": "sequence",
       "difficulty": 10,
-      "description": "Rhythm Path · Schwierigkeit 10"
+      "description": "Rhythm Path · Schwierigkeit 10",
+      "coverImage": "/assets/covers/sequence-10.svg",
+      "playPath": "/play/sequence-10.html"
     },
     {
       "id": 107,
@@ -862,7 +1074,9 @@
       "title": "Pattern Flow 11",
       "type": "sequence",
       "difficulty": 11,
-      "description": "Pattern Flow · Schwierigkeit 11"
+      "description": "Pattern Flow · Schwierigkeit 11",
+      "coverImage": "/assets/covers/sequence-11.svg",
+      "playPath": "/play/sequence-11.html"
     },
     {
       "id": 108,
@@ -870,7 +1084,9 @@
       "title": "Code Track 12",
       "type": "sequence",
       "difficulty": 12,
-      "description": "Code Track · Schwierigkeit 12"
+      "description": "Code Track · Schwierigkeit 12",
+      "coverImage": "/assets/covers/sequence-12.svg",
+      "playPath": "/play/sequence-12.html"
     },
     {
       "id": 109,
@@ -878,7 +1094,9 @@
       "title": "Signal Chain 13",
       "type": "sequence",
       "difficulty": 13,
-      "description": "Signal Chain · Schwierigkeit 13"
+      "description": "Signal Chain · Schwierigkeit 13",
+      "coverImage": "/assets/covers/sequence-13.svg",
+      "playPath": "/play/sequence-13.html"
     },
     {
       "id": 110,
@@ -886,7 +1104,9 @@
       "title": "Order Lock 14",
       "type": "sequence",
       "difficulty": 14,
-      "description": "Order Lock · Schwierigkeit 14"
+      "description": "Order Lock · Schwierigkeit 14",
+      "coverImage": "/assets/covers/sequence-14.svg",
+      "playPath": "/play/sequence-14.html"
     },
     {
       "id": 111,
@@ -894,7 +1114,9 @@
       "title": "Rhythm Path 15",
       "type": "sequence",
       "difficulty": 15,
-      "description": "Rhythm Path · Schwierigkeit 15"
+      "description": "Rhythm Path · Schwierigkeit 15",
+      "coverImage": "/assets/covers/sequence-15.svg",
+      "playPath": "/play/sequence-15.html"
     },
     {
       "id": 112,
@@ -902,7 +1124,9 @@
       "title": "Pattern Flow 16",
       "type": "sequence",
       "difficulty": 16,
-      "description": "Pattern Flow · Schwierigkeit 16"
+      "description": "Pattern Flow · Schwierigkeit 16",
+      "coverImage": "/assets/covers/sequence-16.svg",
+      "playPath": "/play/sequence-16.html"
     },
     {
       "id": 113,
@@ -910,7 +1134,9 @@
       "title": "Code Track 17",
       "type": "sequence",
       "difficulty": 17,
-      "description": "Code Track · Schwierigkeit 17"
+      "description": "Code Track · Schwierigkeit 17",
+      "coverImage": "/assets/covers/sequence-17.svg",
+      "playPath": "/play/sequence-17.html"
     },
     {
       "id": 114,
@@ -918,7 +1144,9 @@
       "title": "Signal Chain 18",
       "type": "sequence",
       "difficulty": 18,
-      "description": "Signal Chain · Schwierigkeit 18"
+      "description": "Signal Chain · Schwierigkeit 18",
+      "coverImage": "/assets/covers/sequence-18.svg",
+      "playPath": "/play/sequence-18.html"
     },
     {
       "id": 115,
@@ -926,7 +1154,9 @@
       "title": "Order Lock 19",
       "type": "sequence",
       "difficulty": 19,
-      "description": "Order Lock · Schwierigkeit 19"
+      "description": "Order Lock · Schwierigkeit 19",
+      "coverImage": "/assets/covers/sequence-19.svg",
+      "playPath": "/play/sequence-19.html"
     },
     {
       "id": 116,
@@ -934,7 +1164,9 @@
       "title": "Rhythm Path 20",
       "type": "sequence",
       "difficulty": 20,
-      "description": "Rhythm Path · Schwierigkeit 20"
+      "description": "Rhythm Path · Schwierigkeit 20",
+      "coverImage": "/assets/covers/sequence-20.svg",
+      "playPath": "/play/sequence-20.html"
     },
     {
       "id": 117,
@@ -942,7 +1174,9 @@
       "title": "Pattern Flow 21",
       "type": "sequence",
       "difficulty": 21,
-      "description": "Pattern Flow · Schwierigkeit 21"
+      "description": "Pattern Flow · Schwierigkeit 21",
+      "coverImage": "/assets/covers/sequence-21.svg",
+      "playPath": "/play/sequence-21.html"
     },
     {
       "id": 118,
@@ -950,7 +1184,9 @@
       "title": "Code Track 22",
       "type": "sequence",
       "difficulty": 22,
-      "description": "Code Track · Schwierigkeit 22"
+      "description": "Code Track · Schwierigkeit 22",
+      "coverImage": "/assets/covers/sequence-22.svg",
+      "playPath": "/play/sequence-22.html"
     },
     {
       "id": 119,
@@ -958,7 +1194,9 @@
       "title": "Signal Chain 23",
       "type": "sequence",
       "difficulty": 23,
-      "description": "Signal Chain · Schwierigkeit 23"
+      "description": "Signal Chain · Schwierigkeit 23",
+      "coverImage": "/assets/covers/sequence-23.svg",
+      "playPath": "/play/sequence-23.html"
     },
     {
       "id": 120,
@@ -966,7 +1204,9 @@
       "title": "Order Lock 24",
       "type": "sequence",
       "difficulty": 24,
-      "description": "Order Lock · Schwierigkeit 24"
+      "description": "Order Lock · Schwierigkeit 24",
+      "coverImage": "/assets/covers/sequence-24.svg",
+      "playPath": "/play/sequence-24.html"
     }
   ]
 }

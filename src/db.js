@@ -31,13 +31,16 @@ function buildGames() {
   for (const type of types) {
     for (let level = 1; level <= 24; level += 1) {
       const baseName = GAME_POOLS[type][(level - 1) % GAME_POOLS[type].length];
+      const slug = `${type}-${level}`;
       games.push({
         id,
-        slug: `${type}-${level}`,
+        slug,
         title: `${baseName} ${level}`,
         type,
         difficulty: level,
-        description: `${baseName} · Schwierigkeit ${level}`
+        description: `${baseName} · Schwierigkeit ${level}`,
+        coverImage: `/assets/covers/${slug}.svg`,
+        playPath: `/play/${slug}.html`
       });
       id += 1;
     }
@@ -59,9 +62,7 @@ export async function initDb() {
   }
 
   db.users = [FIXED_USER];
-  if (!Array.isArray(db.games) || db.games.length < 100) {
-    db.games = buildGames();
-  }
+  db.games = buildGames();
 
   await writeDb(db);
 
