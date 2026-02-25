@@ -11,9 +11,7 @@ let allGames = [];
 
 function launchGame(game) {
   if (!game) return;
-  stageTitle.textContent = game.title;
-  stageMeta.textContent = `${game.type} · Schwierigkeit ${game.difficulty}`;
-  stage.innerHTML = `<iframe class="play-frame" src="${game.playPath}" title="${game.title}" loading="lazy"></iframe>`;
+  window.location.href = game.playPath;
 }
 
 function gameIcon(type) {
@@ -30,7 +28,7 @@ function render(games) {
     .map(
       (game) => `
       <article class="game-card">
-        <img class="game-image" src="${game.coverImage}" alt="${game.title}" loading="lazy" />
+        <img class="game-image" src="${game.coverImage}" alt="${game.title}" loading="lazy" referrerpolicy="no-referrer" />
         <div class="game-cover">${gameIcon(game.type)} ${game.type.toUpperCase()}</div>
         <h3>${game.title}</h3>
         <div class="genre">${game.description}</div>
@@ -73,7 +71,10 @@ async function boot() {
   const data = await gamesRes.json();
   allGames = data.games;
   render(allGames);
-  launchGame(allGames[0]);
+
+  stageTitle.textContent = 'Spiele-Start';
+  stageMeta.textContent = 'Klicke auf „Jetzt spielen“, um auf die Spielseite zu wechseln.';
+  stage.innerHTML = '<div class="launch-hint">🎮 Wähle ein Spiel aus der Liste. Es öffnet sich auf einer eigenen Seite mit Zurück-Button.</div>';
 }
 
 boot();

@@ -1,11 +1,15 @@
 const stage = document.getElementById('stage');
 const meta = document.getElementById('meta');
+const back = document.getElementById('backBtn');
 
 const type = document.body.dataset.type;
 const difficulty = Number(document.body.dataset.difficulty || 1);
 const title = document.body.dataset.title || 'Spiel';
 
 meta.textContent = `${title} · ${type} · Schwierigkeit ${difficulty}`;
+back.onclick = () => {
+  window.location.href = '/games.html';
+};
 
 function rand(max) {
   return Math.floor(Math.random() * max);
@@ -31,10 +35,7 @@ function reaction() {
     if (!e.target.classList.contains('on')) return;
     score += 1;
     document.getElementById('score').textContent = `Score ${score}/${target}`;
-    if (score >= target) {
-      stage.insertAdjacentHTML('beforeend', '<p class="ok">Gewonnen!</p>');
-      return;
-    }
+    if (score >= target) return stage.insertAdjacentHTML('beforeend', '<p class="ok">Gewonnen!</p>');
     next();
   };
   next();
@@ -53,10 +54,7 @@ function aim() {
   dot.onclick = () => {
     score += 1;
     document.getElementById('score').textContent = `Treffer ${score}/${target}`;
-    if (score >= target) {
-      stage.insertAdjacentHTML('beforeend', '<p class="ok">Stark!</p>');
-      return;
-    }
+    if (score >= target) return stage.insertAdjacentHTML('beforeend', '<p class="ok">Stark!</p>');
     move();
   };
   move();
@@ -91,10 +89,7 @@ function memory() {
     b.onclick = () => {
       if (lock || b.classList.contains('d') || b === first) return;
       b.textContent = v;
-      if (!first) {
-        first = b;
-        return;
-      }
+      if (!first) return (first = b);
       if (first.dataset.v === b.dataset.v) {
         first.classList.add('d');
         b.classList.add('d');

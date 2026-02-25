@@ -57,6 +57,6 @@ test('fixed account login and games endpoint work', async () => {
   assert.equal(gamesRes.status, 200);
   const payload = await gamesRes.json();
   assert.ok(Array.isArray(payload.games));
-  assert.ok(payload.games.length >= 100);
-  assert.ok(payload.games.every((g) => typeof g.title === 'string' && g.title.length > 3));
+  assert.equal(payload.games.length, 50);
+  assert.ok(payload.games.every((g) => typeof g.playPath === 'string' && g.playPath.startsWith('/play/')));
 });

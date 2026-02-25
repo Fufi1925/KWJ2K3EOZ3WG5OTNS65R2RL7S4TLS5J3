@@ -1,6 +1,8 @@
 body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0b0f16; color: #eef5ff; }
 .wrap { padding: 12px; }
-#meta { color: #a8c0e8; font-size: 13px; margin-bottom: 8px; }
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
+#meta { color: #a8c0e8; font-size: 13px; }
+#backBtn { background: #1f2d42; color: #eef5ff; border: 1px solid #3b5276; border-radius: 10px; padding: 7px 10px; cursor: pointer; }
 #stage { border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 10px; min-height: 230px; background: rgba(255,255,255,.03); }
 input, button { padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,.22); background:#101825; color:#eef5ff; }
 button { cursor: pointer; }
