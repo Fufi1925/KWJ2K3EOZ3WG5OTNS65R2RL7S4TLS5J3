@@ -29,11 +29,6 @@ function parseCookies(req) {
   );
 }
 
-function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
-  const hash = crypto.pbkdf2Sync(password, salt, 120000, 64, 'sha512').toString('hex');
-  return `${salt}:${hash}`;
-}
-
 function verifyPassword(password, stored) {
   const [salt, original] = String(stored).split(':');
   if (!salt || !original) return false;
@@ -63,7 +58,7 @@ function createSession(user) {
   const raw = crypto.randomBytes(32).toString('hex');
   const sig = crypto.createHmac('sha256', SECRET).update(raw).digest('hex');
   const token = `${raw}.${sig}`;
-  sessions.set(token, { id: user.id, email: user.email, expires: Date.now() + 8 * 60 * 60 * 1000 });
+  sessions.set(token, { id: user.id, username: user.username, expires: Date.now() + 8 * 60 * 60 * 1000 });
   return token;
 }
 
@@ -75,7 +70,7 @@ function getSession(req) {
     sessions.delete(token);
     return null;
   }
-  return { token, user: { id: session.id, email: session.email } };
+  return { token, user: { id: session.id, username: session.username } };
 }
 
 async function serveStatic(req, res) {
@@ -101,31 +96,17 @@ const server = http.createServer(async (req, res) => {
 
   if (req.method === 'GET' && pathname === '/api/health') return json(res, 200, { status: 'ok' });
 
-  if (req.method === 'POST' && pathname === '/api/register') {
-    try {
-      const body = await readBody(req);
-      const email = String(body.email || '').trim().toLowerCase();
-      const password = String(body.password || '');
-      if (!email.includes('@') || password.length < 8) {
-        return json(res, 400, { error: 'Bitte gültige E-Mail und Passwort (mind. 8 Zeichen) nutzen.' });
-      }
-      if (await db.findUserByEmail(email)) return json(res, 409, { error: 'E-Mail existiert bereits.' });
-      const user = await db.addUser({ email, passwordHash: hashPassword(password) });
-      const token = createSession(user);
-      res.setHeader('Set-Cookie', `session=${encodeURIComponent(token)}; HttpOnly; Path=/; Max-Age=28800; SameSite=Lax`);
-      return json(res, 201, { success: true });
-    } catch {
-      return json(res, 400, { error: 'Ungültige Anfrage' });
-    }
-  }
-
   if (req.method === 'POST' && pathname === '/api/login') {
     try {
       const body = await readBody(req);
-      const email = String(body.email || '').trim().toLowerCase();
+      const username = String(body.username || '').trim();
       const password = String(body.password || '');
-      const user = await db.findUserByEmail(email);
-      if (!user || !verifyPassword(password, user.passwordHash)) return json(res, 401, { error: 'Login fehlgeschlagen.' });
+      const user = await db.findUserByUsername(username);
+
+      if (!user || !verifyPassword(password, user.passwordHash)) {
+        return json(res, 401, { error: 'Login fehlgeschlagen.' });
+      }
+
       const token = createSession(user);
       res.setHeader('Set-Cookie', `session=${encodeURIComponent(token)}; HttpOnly; Path=/; Max-Age=28800; SameSite=Lax`);
       return json(res, 200, { success: true });

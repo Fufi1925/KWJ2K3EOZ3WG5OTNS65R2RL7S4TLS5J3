@@ -1,31 +1,48 @@
 import { promises as fs } from 'node:fs';
+import crypto from 'node:crypto';
 
 const DB_PATH = process.env.DB_PATH || './data.json';
 
-const gameFamilies = [
-  { type: 'reaction', title: 'Reaction Grid' },
-  { type: 'memory', title: 'Memory Flip' },
-  { type: 'aim', title: 'Aim Trainer' },
-  { type: 'math', title: 'Math Rush' },
-  { type: 'sequence', title: 'Sequence Tap' }
-];
+const GAME_POOLS = {
+  reaction: ['Neon Click', 'Blitz Reflex', 'Pulse Tap', 'Quick Pixel', 'Turbo Finger'],
+  memory: ['Card Recall', 'Mind Mirror', 'Twin Hunt', 'Echo Pair', 'Memory Storm'],
+  aim: ['Dot Hunter', 'Sniper Pop', 'Target Rush', 'Aim Pulse', 'Focus Shot'],
+  math: ['Zahlen Sprint', 'Plus Master', 'Brain Calc', 'Rapid Sum', 'Logic Count'],
+  sequence: ['Pattern Flow', 'Code Track', 'Signal Chain', 'Order Lock', 'Rhythm Path']
+};
+
+const FIXED_USER = {
+  id: 1,
+  username: 'Test67',
+  passwordHash: hashPassword('676767'),
+  createdAt: new Date().toISOString()
+};
+
+function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
+  const hash = crypto.pbkdf2Sync(password, salt, 120000, 64, 'sha512').toString('hex');
+  return `${salt}:${hash}`;
+}
 
 function buildGames() {
+  const types = Object.keys(GAME_POOLS);
   const games = [];
   let id = 1;
-  for (const family of gameFamilies) {
+
+  for (const type of types) {
     for (let level = 1; level <= 24; level += 1) {
+      const baseName = GAME_POOLS[type][(level - 1) % GAME_POOLS[type].length];
       games.push({
         id,
-        slug: `${family.type}-${level}`,
-        title: `${family.title} ${level}`,
-        type: family.type,
+        slug: `${type}-${level}`,
+        title: `${baseName} ${level}`,
+        type,
         difficulty: level,
-        description: `Level ${level} - spiele direkt auf der Seite.`
+        description: `${baseName} · Schwierigkeit ${level}`
       });
       id += 1;
     }
   }
+
   return games;
 }
 
@@ -41,24 +58,16 @@ export async function initDb() {
     db = { users: [], games: [] };
   }
 
-  if (!Array.isArray(db.users)) db.users = [];
-  if (!Array.isArray(db.games) || db.games.length < 100) db.games = buildGames();
+  db.users = [FIXED_USER];
+  if (!Array.isArray(db.games) || db.games.length < 100) {
+    db.games = buildGames();
+  }
 
   await writeDb(db);
 
   return {
-    async allUsers() {
-      return db.users;
-    },
-    async findUserByEmail(email) {
-      return db.users.find((u) => u.email === email) || null;
-    },
-    async addUser(user) {
-      const nextId = db.users.length ? Math.max(...db.users.map((u) => u.id)) + 1 : 1;
-      const entry = { id: nextId, ...user, createdAt: new Date().toISOString() };
-      db.users.push(entry);
-      await writeDb(db);
-      return entry;
+    async findUserByUsername(username) {
+      return db.users.find((u) => u.username.toLowerCase() === String(username).toLowerCase()) || null;
     },
     async getGames() {
       return db.games;

@@ -1,22 +1,5 @@
 const form = document.getElementById('authForm');
 const message = document.getElementById('message');
-const submitBtn = document.getElementById('submitBtn');
-const loginTab = document.getElementById('loginTab');
-const registerTab = document.getElementById('registerTab');
-
-let mode = 'login';
-
-function setMode(nextMode) {
-  mode = nextMode;
-  const isLogin = mode === 'login';
-  loginTab.classList.toggle('active', isLogin);
-  registerTab.classList.toggle('active', !isLogin);
-  submitBtn.textContent = isLogin ? 'Einloggen' : 'Registrieren';
-  message.textContent = '';
-}
-
-loginTab.addEventListener('click', () => setMode('login'));
-registerTab.addEventListener('click', () => setMode('register'));
 
 async function checkSession() {
   const response = await fetch('/api/me');
@@ -28,12 +11,11 @@ form.addEventListener('submit', async (event) => {
   message.textContent = '';
   const formData = new FormData(form);
   const payload = {
-    email: String(formData.get('email') || '').trim(),
+    username: String(formData.get('username') || '').trim(),
     password: String(formData.get('password') || '')
   };
 
-  const endpoint = mode === 'login' ? '/api/login' : '/api/register';
-  const response = await fetch(endpoint, {
+  const response = await fetch('/api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
@@ -41,7 +23,7 @@ form.addEventListener('submit', async (event) => {
 
   if (!response.ok) {
     const data = await response.json();
-    message.textContent = data.error || 'Aktion fehlgeschlagen.';
+    message.textContent = data.error || 'Anmeldung fehlgeschlagen.';
     return;
   }
 

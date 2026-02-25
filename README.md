@@ -1,20 +1,22 @@
-# Orendor Arena
+# Fufihub
 
-Eine echte Website mit:
-- Login + Registrierung (kein Demo-Account erforderlich)
-- 120 eigenen Spielen direkt auf deiner Seite
-- Kein Weiterleiten auf externe Game-Websites
-- Modernes Black-Glass Design
+Gaming-Website mit schwarzem Glass-Design:
+- Login mit Benutzername + Passwort
+- 120 interne spielbare Games (ohne externe Weiterleitung)
+- Verbesserte Game-Ansicht für alle Nutzer
 
 ## Start
 ```bash
 npm start
 ```
 
-Dann im Browser öffnen:
+Danach im Browser öffnen:
 `http://localhost:3000`
 
-## Nutzung
-1. Registrieren mit E-Mail + Passwort (mind. 8 Zeichen)
-2. Einloggen
-3. Spiele direkt in der Plattform spielen
+## Login-Daten
+- Benutzername: `Test67`
+- Passwort: `676767`
+
+## Hinweis
+Beschreibung auf der Login-Seite:
+`Melde dich an wenn du kannst wenn du kein acc hast frag Laurenz.`

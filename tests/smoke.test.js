@@ -6,7 +6,7 @@ import path from 'node:path';
 import { promises as fs } from 'node:fs';
 
 const PORT = 3199;
-const TEST_DB = path.join(os.tmpdir(), `orendor-test-${Date.now()}.json`);
+const TEST_DB = path.join(os.tmpdir(), `fufihub-test-${Date.now()}.json`);
 let server;
 
 function waitForServer() {
@@ -39,21 +39,11 @@ test('health endpoint works', async () => {
   assert.equal(response.status, 200);
 });
 
-test('register, login and games endpoint work', async () => {
-  const email = `user${Date.now()}@example.com`;
-  const password = 'Sicher1234!';
-
-  const registerRes = await fetch(`http://127.0.0.1:${PORT}/api/register`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
-  });
-  assert.equal(registerRes.status, 201);
-
+test('fixed account login and games endpoint work', async () => {
   const loginRes = await fetch(`http://127.0.0.1:${PORT}/api/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password })
+    body: JSON.stringify({ username: 'Test67', password: '676767' })
   });
 
   assert.equal(loginRes.status, 200);
@@ -68,5 +58,5 @@ test('register, login and games endpoint work', async () => {
   const payload = await gamesRes.json();
   assert.ok(Array.isArray(payload.games));
   assert.ok(payload.games.length >= 100);
-  assert.ok(payload.games.every((g) => !('url' in g)));
+  assert.ok(payload.games.every((g) => typeof g.title === 'string' && g.title.length > 3));
 });
