@@ -5,14 +5,100 @@ const back = document.getElementById('backBtn');
 const type = document.body.dataset.type;
 const difficulty = Number(document.body.dataset.difficulty || 1);
 const title = document.body.dataset.title || 'Spiel';
+const dimension = document.body.dataset.dimension || '2D';
 
-meta.textContent = `${title} · ${type} · Schwierigkeit ${difficulty}`;
+meta.textContent = `${title} · ${dimension} · ${type} · Schwierigkeit ${difficulty}`;
 back.onclick = () => {
   window.location.href = '/games.html';
 };
 
 function rand(max) {
   return Math.floor(Math.random() * max);
+}
+
+function render3DChallenge() {
+  stage.innerHTML = '<p>3D-Run: Weiche Blöcken aus und sammle Punkte.</p><canvas id="c3d" width="760" height="340"></canvas><p id="score3d">Score: 0</p>';
+  const c = document.getElementById('c3d');
+  const ctx = c.getContext('2d');
+  const player = { lane: 1 };
+  const lanes = [230, 380, 530];
+  let score = 0;
+  let over = false;
+  const speed = 2 + difficulty * 0.35;
+  const obstacles = [];
+
+  function spawn() {
+    obstacles.push({ lane: rand(3), z: 1 });
+  }
+
+  function drawRoad() {
+    ctx.fillStyle = '#090f17';
+    ctx.fillRect(0, 0, c.width, c.height);
+    ctx.strokeStyle = '#2b3e59';
+    for (let i = 0; i < 20; i += 1) {
+      const y = 40 + i * 18;
+      ctx.beginPath();
+      ctx.moveTo(140 - i * 5, y);
+      ctx.lineTo(620 + i * 5, y);
+      ctx.stroke();
+    }
+  }
+
+  function drawPlayer() {
+    ctx.fillStyle = '#3bf3b2';
+    const x = lanes[player.lane] - 18;
+    const y = 280;
+    ctx.fillRect(x, y, 36, 36);
+  }
+
+  function drawObstacle(o) {
+    const scale = 1.5 - o.z;
+    const size = Math.max(16, 44 * scale);
+    const y = 40 + (1 - o.z) * 260;
+    const x = lanes[o.lane] - size / 2;
+    ctx.fillStyle = '#ff6f8c';
+    ctx.fillRect(x, y, size, size);
+  }
+
+  function tick() {
+    if (over) return;
+    if (Math.random() < 0.04 + difficulty * 0.004) spawn();
+
+    drawRoad();
+    obstacles.forEach((o) => {
+      o.z -= 0.008 * speed;
+      drawObstacle(o);
+    });
+    drawPlayer();
+
+    for (const o of obstacles) {
+      if (o.z < 0.12 && o.z > 0.02 && o.lane === player.lane) {
+        over = true;
+        stage.insertAdjacentHTML('beforeend', '<p class="bad">Game Over – versuche es erneut.</p>');
+      }
+    }
+
+    for (let i = obstacles.length - 1; i >= 0; i -= 1) {
+      if (obstacles[i].z <= 0) {
+        obstacles.splice(i, 1);
+        score += 1;
+        document.getElementById('score3d').textContent = `Score: ${score}`;
+        if (score >= 10 + difficulty) {
+          over = true;
+          stage.insertAdjacentHTML('beforeend', '<p class="ok">Gewonnen!</p>');
+        }
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  document.onkeydown = (e) => {
+    if (e.key === 'ArrowLeft') player.lane = Math.max(0, player.lane - 1);
+    if (e.key === 'ArrowRight') player.lane = Math.min(2, player.lane + 1);
+  };
+
+  tick();
 }
 
 function reaction() {
@@ -121,7 +207,9 @@ function sequence() {
   };
 }
 
-if (type === 'reaction') reaction();
+if (dimension === '3D') {
+  render3DChallenge();
+} else if (type === 'reaction') reaction();
 else if (type === 'aim') aim();
 else if (type === 'math') math();
 else if (type === 'memory') memory();

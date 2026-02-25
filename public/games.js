@@ -3,9 +3,6 @@ const gameCount = document.getElementById('gameCount');
 const search = document.getElementById('search');
 const logoutBtn = document.getElementById('logoutBtn');
 const userInfo = document.getElementById('userInfo');
-const stageTitle = document.getElementById('stageTitle');
-const stageMeta = document.getElementById('stageMeta');
-const stage = document.getElementById('stage');
 
 let allGames = [];
 
@@ -28,8 +25,11 @@ function render(games) {
     .map(
       (game) => `
       <article class="game-card">
-        <img class="game-image" src="${game.coverImage}" alt="${game.title}" loading="lazy" referrerpolicy="no-referrer" />
-        <div class="game-cover">${gameIcon(game.type)} ${game.type.toUpperCase()}</div>
+        <img class="game-image" src="${game.coverImage}" alt="${game.title}" loading="lazy" />
+        <div class="game-topline">
+          <div class="game-cover">${gameIcon(game.type)} ${game.type.toUpperCase()}</div>
+          <div class="dimension">${game.dimension}</div>
+        </div>
         <h3>${game.title}</h3>
         <div class="genre">${game.description}</div>
         <button class="play-btn" data-id="${game.id}" type="button">Jetzt spielen</button>
@@ -47,7 +47,9 @@ gamesGrid.addEventListener('click', (event) => {
 
 search.addEventListener('input', () => {
   const term = search.value.toLowerCase().trim();
-  const filtered = allGames.filter((g) => g.title.toLowerCase().includes(term) || g.type.toLowerCase().includes(term));
+  const filtered = allGames.filter(
+    (g) => g.title.toLowerCase().includes(term) || g.type.toLowerCase().includes(term) || g.dimension.toLowerCase().includes(term)
+  );
   render(filtered);
 });
 
@@ -71,10 +73,6 @@ async function boot() {
   const data = await gamesRes.json();
   allGames = data.games;
   render(allGames);
-
-  stageTitle.textContent = 'Spiele-Start';
-  stageMeta.textContent = 'Klicke auf „Jetzt spielen“, um auf die Spielseite zu wechseln.';
-  stage.innerHTML = '<div class="launch-hint">🎮 Wähle ein Spiel aus der Liste. Es öffnet sich auf einer eigenen Seite mit Zurück-Button.</div>';
 }
 
 boot();

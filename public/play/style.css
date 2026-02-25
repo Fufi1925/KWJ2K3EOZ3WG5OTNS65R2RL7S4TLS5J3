@@ -1,17 +1,19 @@
-body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0b0f16; color: #eef5ff; }
-.wrap { padding: 12px; }
-.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; gap: 8px; }
-#meta { color: #a8c0e8; font-size: 13px; }
-#backBtn { background: #1f2d42; color: #eef5ff; border: 1px solid #3b5276; border-radius: 10px; padding: 7px 10px; cursor: pointer; }
-#stage { border: 1px solid rgba(255,255,255,.18); border-radius: 12px; padding: 10px; min-height: 230px; background: rgba(255,255,255,.03); }
-input, button { padding: 8px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,.22); background:#101825; color:#eef5ff; }
+body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #0f172a; color: #ecfeff; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 18px; }
+.top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; gap: 8px; }
+#meta { color: #bae6fd; font-size: 14px; }
+#backBtn { background: #06b6d4; color: #0f172a; border: 0; border-radius: 999px; padding: 9px 13px; cursor: pointer; font-weight: 700; }
+#stage { border: 1px solid #334155; border-radius: 16px; padding: 14px; min-height: 280px; background: #111827; box-shadow: 0 20px 45px rgba(0,0,0,.35); }
+input, button { padding: 8px 10px; border-radius: 10px; border: 1px solid #334155; background:#0b1220; color:#ecfeff; }
 button { cursor: pointer; }
+#c3d { width: 100%; max-width: 760px; border-radius: 12px; border: 1px solid #334155; background: #0b1220; }
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; max-width: 320px; }
 .cell { height: 50px; }
-.cell.on { background: #1fd58a; }
-.arena { position: relative; height: 210px; max-width: 620px; border: 1px dashed rgba(255,255,255,.28); border-radius: 10px; }
-.dot { position: absolute; width: 28px; height: 28px; border-radius: 99px; border: none; background: #ff6f90; }
+.cell.on { background: #22c55e; }
+.arena { position: relative; height: 220px; max-width: 700px; border: 1px dashed #475569; border-radius: 10px; }
+.dot { position: absolute; width: 28px; height: 28px; border-radius: 99px; border: none; background: #f43f5e; }
 .mem { display: grid; grid-template-columns: repeat(auto-fit,minmax(48px,1fr)); gap: 6px; max-width: 420px; }
 .m { height: 48px; }
-.m.d { background: #1fd58a55; }
-.ok { color: #86ffc3; font-weight: 700; }
+.m.d { background: #22c55e55; }
+.ok { color: #86efac; font-weight: 700; }
+.bad { color: #fca5a5; font-weight: 700; }

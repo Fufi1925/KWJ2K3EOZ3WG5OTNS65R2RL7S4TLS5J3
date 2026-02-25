@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#083344"/></linearGradient></defs>
+<rect width="640" height="360" fill="#07101a"/>
+<rect x="16" y="16" width="608" height="328" rx="18" fill="url(#g)" opacity="0.9"/>
+<circle cx="560" cy="80" r="58" fill="#ffffff22"/>
+<text x="38" y="122" font-size="46" font-family="Inter,Arial" fill="#ffffff">🔢</text>
+<text x="38" y="180" font-size="38" font-family="Inter,Arial" font-weight="700" fill="#f8fcff">Robo-Kriegsführung</text>
+<text x="38" y="225" font-size="20" font-family="Inter,Arial" fill="#e0f0ff">2D • SEQUENCE • LEVEL 10</text>
+</svg>

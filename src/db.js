@@ -13,14 +13,6 @@ const IDEAS = [
 
 const MODES = ['reaction', 'memory', 'aim', 'math', 'sequence'];
 
-const STOCK_IMAGES = {
-  reaction: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80',
-  memory: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80',
-  aim: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80',
-  math: 'https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80',
-  sequence: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80'
-};
-
 const FIXED_USER = {
   id: 1,
   username: 'Test67',
@@ -44,19 +36,27 @@ function slugify(input) {
     .replace(/^-+|-+$/g, '');
 }
 
+function pickDimension(title, index) {
+  const threeDHints = ['Labyrinth', 'Turm', 'Racer', 'Kart', 'Battle', 'Arena', 'Kampfzone', 'Survival'];
+  if (threeDHints.some((h) => title.includes(h))) return '3D';
+  return index % 3 === 0 ? '3D' : '2D';
+}
+
 function buildGames() {
   return IDEAS.map((title, index) => {
     const id = index + 1;
     const mode = MODES[index % MODES.length];
     const slug = `${id.toString().padStart(2, '0')}-${slugify(title)}`;
+    const dimension = pickDimension(title, index);
     return {
       id,
       slug,
       title,
       type: mode,
+      dimension,
       difficulty: (index % 10) + 1,
-      description: `Game ${id} · ${title}`,
-      coverImage: STOCK_IMAGES[mode],
+      description: `${dimension} ${mode.toUpperCase()} · ${title}`,
+      coverImage: `/assets/covers/${slug}.svg`,
       playPath: `/play/${slug}.html`
     };
   });

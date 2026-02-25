@@ -3,8 +3,8 @@
     {
       "id": 1,
       "username": "Test67",
-      "passwordHash": "b1a97aea5dcb4ceafe22ca279d945d1f:c65aa4ddde6c092545585c83fc8be856413bcdf0078d8d00003da6beee4de3a59fcb01f8acb4414fea2988e4a4bdac35bdcdb879ab0de16915fe0b42e089324d",
-      "createdAt": "2026-02-25T18:31:09.197Z"
+      "passwordHash": "84083109375f90d9e934b2cf19b2af86:4a8840ccc16d25e9d2913ed647fb0d3128d372d1bca7d687cbd53f605a11b2e3814119f701825469c033d59896e2a4314a2a6955b33c893c0224729a6e306d3d",
+      "createdAt": "2026-02-25T18:45:19.475Z"
     }
   ],
   "games": [
@@ -13,9 +13,10 @@
       "slug": "01-pixel-krieger",
       "title": "Pixel-Krieger",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 1,
-      "description": "Game 1 · Pixel-Krieger",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Pixel-Krieger",
+      "coverImage": "/assets/covers/01-pixel-krieger.svg",
       "playPath": "/play/01-pixel-krieger.html"
     },
     {
@@ -23,9 +24,10 @@
       "slug": "02-zombie-turmverteidiger",
       "title": "Zombie-Turmverteidiger",
       "type": "memory",
+      "dimension": "3D",
       "difficulty": 2,
-      "description": "Game 2 · Zombie-Turmverteidiger",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MEMORY · Zombie-Turmverteidiger",
+      "coverImage": "/assets/covers/02-zombie-turmverteidiger.svg",
       "playPath": "/play/02-zombie-turmverteidiger.html"
     },
     {
@@ -33,9 +35,10 @@
       "slug": "03-laser-rettung",
       "title": "Laser-Rettung",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 3,
-      "description": "Game 3 · Laser-Rettung",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Laser-Rettung",
+      "coverImage": "/assets/covers/03-laser-rettung.svg",
       "playPath": "/play/03-laser-rettung.html"
     },
     {
@@ -43,9 +46,10 @@
       "slug": "04-dschungel-runner",
       "title": "Dschungel-Runner",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 4,
-      "description": "Game 4 · Dschungel-Runner",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Dschungel-Runner",
+      "coverImage": "/assets/covers/04-dschungel-runner.svg",
       "playPath": "/play/04-dschungel-runner.html"
     },
     {
@@ -53,9 +57,10 @@
       "slug": "05-cyberpunk-shooter",
       "title": "Cyberpunk-Shooter",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 5,
-      "description": "Game 5 · Cyberpunk-Shooter",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Cyberpunk-Shooter",
+      "coverImage": "/assets/covers/05-cyberpunk-shooter.svg",
       "playPath": "/play/05-cyberpunk-shooter.html"
     },
     {
@@ -63,9 +68,10 @@
       "slug": "06-meteor-schlacht",
       "title": "Meteor-Schlacht",
       "type": "reaction",
+      "dimension": "2D",
       "difficulty": 6,
-      "description": "Game 6 · Meteor-Schlacht",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "2D REACTION · Meteor-Schlacht",
+      "coverImage": "/assets/covers/06-meteor-schlacht.svg",
       "playPath": "/play/06-meteor-schlacht.html"
     },
     {
@@ -73,9 +79,10 @@
       "slug": "07-drachen-reiter",
       "title": "Drachen-Reiter",
       "type": "memory",
+      "dimension": "3D",
       "difficulty": 7,
-      "description": "Game 7 · Drachen-Reiter",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MEMORY · Drachen-Reiter",
+      "coverImage": "/assets/covers/07-drachen-reiter.svg",
       "playPath": "/play/07-drachen-reiter.html"
     },
     {
@@ -83,9 +90,10 @@
       "slug": "08-geisterjaeger",
       "title": "Geisterjäger",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 8,
-      "description": "Game 8 · Geisterjäger",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Geisterjäger",
+      "coverImage": "/assets/covers/08-geisterjaeger.svg",
       "playPath": "/play/08-geisterjaeger.html"
     },
     {
@@ -93,9 +101,10 @@
       "slug": "09-ninja-springer",
       "title": "Ninja-Springer",
       "type": "math",
+      "dimension": "2D",
       "difficulty": 9,
-      "description": "Game 9 · Ninja-Springer",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MATH · Ninja-Springer",
+      "coverImage": "/assets/covers/09-ninja-springer.svg",
       "playPath": "/play/09-ninja-springer.html"
     },
     {
@@ -103,9 +112,10 @@
       "slug": "10-arena-kaempfer",
       "title": "Arena-Kämpfer",
       "type": "sequence",
+      "dimension": "3D",
       "difficulty": 10,
-      "description": "Game 10 · Arena-Kämpfer",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "3D SEQUENCE · Arena-Kämpfer",
+      "coverImage": "/assets/covers/10-arena-kaempfer.svg",
       "playPath": "/play/10-arena-kaempfer.html"
     },
     {
@@ -113,9 +123,10 @@
       "slug": "11-explosions-ritter",
       "title": "Explosions-Ritter",
       "type": "reaction",
+      "dimension": "2D",
       "difficulty": 1,
-      "description": "Game 11 · Explosions-Ritter",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "2D REACTION · Explosions-Ritter",
+      "coverImage": "/assets/covers/11-explosions-ritter.svg",
       "playPath": "/play/11-explosions-ritter.html"
     },
     {
@@ -123,9 +134,10 @@
       "slug": "12-schwertmagier",
       "title": "Schwertmagier",
       "type": "memory",
+      "dimension": "2D",
       "difficulty": 2,
-      "description": "Game 12 · Schwertmagier",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MEMORY · Schwertmagier",
+      "coverImage": "/assets/covers/12-schwertmagier.svg",
       "playPath": "/play/12-schwertmagier.html"
     },
     {
@@ -133,9 +145,10 @@
       "slug": "13-eis-boss-battle",
       "title": "Eis-Boss-Battle",
       "type": "aim",
+      "dimension": "3D",
       "difficulty": 3,
-      "description": "Game 13 · Eis-Boss-Battle",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "3D AIM · Eis-Boss-Battle",
+      "coverImage": "/assets/covers/13-eis-boss-battle.svg",
       "playPath": "/play/13-eis-boss-battle.html"
     },
     {
@@ -143,9 +156,10 @@
       "slug": "14-mutanten-krieger",
       "title": "Mutanten-Krieger",
       "type": "math",
+      "dimension": "2D",
       "difficulty": 4,
-      "description": "Game 14 · Mutanten-Krieger",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MATH · Mutanten-Krieger",
+      "coverImage": "/assets/covers/14-mutanten-krieger.svg",
       "playPath": "/play/14-mutanten-krieger.html"
     },
     {
@@ -153,9 +167,10 @@
       "slug": "15-wasser-pistolenkampf",
       "title": "Wasser-Pistolenkampf",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 5,
-      "description": "Game 15 · Wasser-Pistolenkampf",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Wasser-Pistolenkampf",
+      "coverImage": "/assets/covers/15-wasser-pistolenkampf.svg",
       "playPath": "/play/15-wasser-pistolenkampf.html"
     },
     {
@@ -163,9 +178,10 @@
       "slug": "16-weltraum-retter",
       "title": "Weltraum-Retter",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 6,
-      "description": "Game 16 · Weltraum-Retter",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Weltraum-Retter",
+      "coverImage": "/assets/covers/16-weltraum-retter.svg",
       "playPath": "/play/16-weltraum-retter.html"
     },
     {
@@ -173,9 +189,10 @@
       "slug": "17-vulkan-survival",
       "title": "Vulkan-Survival",
       "type": "memory",
+      "dimension": "3D",
       "difficulty": 7,
-      "description": "Game 17 · Vulkan-Survival",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MEMORY · Vulkan-Survival",
+      "coverImage": "/assets/covers/17-vulkan-survival.svg",
       "playPath": "/play/17-vulkan-survival.html"
     },
     {
@@ -183,9 +200,10 @@
       "slug": "18-flammen-zauberer",
       "title": "Flammen-Zauberer",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 8,
-      "description": "Game 18 · Flammen-Zauberer",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Flammen-Zauberer",
+      "coverImage": "/assets/covers/18-flammen-zauberer.svg",
       "playPath": "/play/18-flammen-zauberer.html"
     },
     {
@@ -193,9 +211,10 @@
       "slug": "19-sternen-pilot",
       "title": "Sternen-Pilot",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 9,
-      "description": "Game 19 · Sternen-Pilot",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Sternen-Pilot",
+      "coverImage": "/assets/covers/19-sternen-pilot.svg",
       "playPath": "/play/19-sternen-pilot.html"
     },
     {
@@ -203,9 +222,10 @@
       "slug": "20-robo-kriegsfuehrung",
       "title": "Robo-Kriegsführung",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 10,
-      "description": "Game 20 · Robo-Kriegsführung",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Robo-Kriegsführung",
+      "coverImage": "/assets/covers/20-robo-kriegsfuehrung.svg",
       "playPath": "/play/20-robo-kriegsfuehrung.html"
     },
     {
@@ -213,9 +233,10 @@
       "slug": "21-kampf-der-gladiatoren",
       "title": "Kampf der Gladiatoren",
       "type": "reaction",
+      "dimension": "2D",
       "difficulty": 1,
-      "description": "Game 21 · Kampf der Gladiatoren",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "2D REACTION · Kampf der Gladiatoren",
+      "coverImage": "/assets/covers/21-kampf-der-gladiatoren.svg",
       "playPath": "/play/21-kampf-der-gladiatoren.html"
     },
     {
@@ -223,9 +244,10 @@
       "slug": "22-daemonenjaeger",
       "title": "Dämonenjäger",
       "type": "memory",
+      "dimension": "3D",
       "difficulty": 2,
-      "description": "Game 22 · Dämonenjäger",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MEMORY · Dämonenjäger",
+      "coverImage": "/assets/covers/22-daemonenjaeger.svg",
       "playPath": "/play/22-daemonenjaeger.html"
     },
     {
@@ -233,9 +255,10 @@
       "slug": "23-schlangenkrieger",
       "title": "Schlangenkrieger",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 3,
-      "description": "Game 23 · Schlangenkrieger",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Schlangenkrieger",
+      "coverImage": "/assets/covers/23-schlangenkrieger.svg",
       "playPath": "/play/23-schlangenkrieger.html"
     },
     {
@@ -243,9 +266,10 @@
       "slug": "24-turbo-racer-shooter",
       "title": "Turbo-Racer Shooter",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 4,
-      "description": "Game 24 · Turbo-Racer Shooter",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Turbo-Racer Shooter",
+      "coverImage": "/assets/covers/24-turbo-racer-shooter.svg",
       "playPath": "/play/24-turbo-racer-shooter.html"
     },
     {
@@ -253,9 +277,10 @@
       "slug": "25-katapult-belagerung",
       "title": "Katapult-Belagerung",
       "type": "sequence",
+      "dimension": "3D",
       "difficulty": 5,
-      "description": "Game 25 · Katapult-Belagerung",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "3D SEQUENCE · Katapult-Belagerung",
+      "coverImage": "/assets/covers/25-katapult-belagerung.svg",
       "playPath": "/play/25-katapult-belagerung.html"
     },
     {
@@ -263,9 +288,10 @@
       "slug": "26-meteoriten-survival",
       "title": "Meteoriten-Survival",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 6,
-      "description": "Game 26 · Meteoriten-Survival",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Meteoriten-Survival",
+      "coverImage": "/assets/covers/26-meteoriten-survival.svg",
       "playPath": "/play/26-meteoriten-survival.html"
     },
     {
@@ -273,9 +299,10 @@
       "slug": "27-ritterlauf",
       "title": "Ritterlauf",
       "type": "memory",
+      "dimension": "2D",
       "difficulty": 7,
-      "description": "Game 27 · Ritterlauf",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MEMORY · Ritterlauf",
+      "coverImage": "/assets/covers/27-ritterlauf.svg",
       "playPath": "/play/27-ritterlauf.html"
     },
     {
@@ -283,9 +310,10 @@
       "slug": "28-stealth-agent",
       "title": "Stealth-Agent",
       "type": "aim",
+      "dimension": "3D",
       "difficulty": 8,
-      "description": "Game 28 · Stealth-Agent",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "3D AIM · Stealth-Agent",
+      "coverImage": "/assets/covers/28-stealth-agent.svg",
       "playPath": "/play/28-stealth-agent.html"
     },
     {
@@ -293,9 +321,10 @@
       "slug": "29-monsterjaeger-2d",
       "title": "Monsterjäger 2D",
       "type": "math",
+      "dimension": "2D",
       "difficulty": 9,
-      "description": "Game 29 · Monsterjäger 2D",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MATH · Monsterjäger 2D",
+      "coverImage": "/assets/covers/29-monsterjaeger-2d.svg",
       "playPath": "/play/29-monsterjaeger-2d.html"
     },
     {
@@ -303,9 +332,10 @@
       "slug": "30-hindernis-labyrinth",
       "title": "Hindernis-Labyrinth",
       "type": "sequence",
+      "dimension": "3D",
       "difficulty": 10,
-      "description": "Game 30 · Hindernis-Labyrinth",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "3D SEQUENCE · Hindernis-Labyrinth",
+      "coverImage": "/assets/covers/30-hindernis-labyrinth.svg",
       "playPath": "/play/30-hindernis-labyrinth.html"
     },
     {
@@ -313,9 +343,10 @@
       "slug": "31-laser-kampfzone",
       "title": "Laser-Kampfzone",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 1,
-      "description": "Game 31 · Laser-Kampfzone",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Laser-Kampfzone",
+      "coverImage": "/assets/covers/31-laser-kampfzone.svg",
       "playPath": "/play/31-laser-kampfzone.html"
     },
     {
@@ -323,9 +354,10 @@
       "slug": "32-sturm-reiter",
       "title": "Sturm-Reiter",
       "type": "memory",
+      "dimension": "2D",
       "difficulty": 2,
-      "description": "Game 32 · Sturm-Reiter",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MEMORY · Sturm-Reiter",
+      "coverImage": "/assets/covers/32-sturm-reiter.svg",
       "playPath": "/play/32-sturm-reiter.html"
     },
     {
@@ -333,9 +365,10 @@
       "slug": "33-explosions-kettenreaktion",
       "title": "Explosions-Kettenreaktion",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 3,
-      "description": "Game 33 · Explosions-Kettenreaktion",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Explosions-Kettenreaktion",
+      "coverImage": "/assets/covers/33-explosions-kettenreaktion.svg",
       "playPath": "/play/33-explosions-kettenreaktion.html"
     },
     {
@@ -343,9 +376,10 @@
       "slug": "34-vampirjaeger",
       "title": "Vampirjäger",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 4,
-      "description": "Game 34 · Vampirjäger",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Vampirjäger",
+      "coverImage": "/assets/covers/34-vampirjaeger.svg",
       "playPath": "/play/34-vampirjaeger.html"
     },
     {
@@ -353,9 +387,10 @@
       "slug": "35-magische-festung",
       "title": "Magische Festung",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 5,
-      "description": "Game 35 · Magische Festung",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Magische Festung",
+      "coverImage": "/assets/covers/35-magische-festung.svg",
       "playPath": "/play/35-magische-festung.html"
     },
     {
@@ -363,9 +398,10 @@
       "slug": "36-luftschiff-battle",
       "title": "Luftschiff-Battle",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 6,
-      "description": "Game 36 · Luftschiff-Battle",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Luftschiff-Battle",
+      "coverImage": "/assets/covers/36-luftschiff-battle.svg",
       "playPath": "/play/36-luftschiff-battle.html"
     },
     {
@@ -373,9 +409,10 @@
       "slug": "37-schiessstand-challenge",
       "title": "Schießstand Challenge",
       "type": "memory",
+      "dimension": "3D",
       "difficulty": 7,
-      "description": "Game 37 · Schießstand Challenge",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MEMORY · Schießstand Challenge",
+      "coverImage": "/assets/covers/37-schiessstand-challenge.svg",
       "playPath": "/play/37-schiessstand-challenge.html"
     },
     {
@@ -383,9 +420,10 @@
       "slug": "38-roboter-kampfturnier",
       "title": "Roboter-Kampfturnier",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 8,
-      "description": "Game 38 · Roboter-Kampfturnier",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Roboter-Kampfturnier",
+      "coverImage": "/assets/covers/38-roboter-kampfturnier.svg",
       "playPath": "/play/38-roboter-kampfturnier.html"
     },
     {
@@ -393,9 +431,10 @@
       "slug": "39-tornado-jaeger",
       "title": "Tornado-Jäger",
       "type": "math",
+      "dimension": "2D",
       "difficulty": 9,
-      "description": "Game 39 · Tornado-Jäger",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MATH · Tornado-Jäger",
+      "coverImage": "/assets/covers/39-tornado-jaeger.svg",
       "playPath": "/play/39-tornado-jaeger.html"
     },
     {
@@ -403,9 +442,10 @@
       "slug": "40-blitz-ninja",
       "title": "Blitz Ninja",
       "type": "sequence",
+      "dimension": "3D",
       "difficulty": 10,
-      "description": "Game 40 · Blitz Ninja",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "3D SEQUENCE · Blitz Ninja",
+      "coverImage": "/assets/covers/40-blitz-ninja.svg",
       "playPath": "/play/40-blitz-ninja.html"
     },
     {
@@ -413,9 +453,10 @@
       "slug": "41-monster-kart",
       "title": "Monster-Kart",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 1,
-      "description": "Game 41 · Monster-Kart",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Monster-Kart",
+      "coverImage": "/assets/covers/41-monster-kart.svg",
       "playPath": "/play/41-monster-kart.html"
     },
     {
@@ -423,9 +464,10 @@
       "slug": "42-alien-invasion-defense",
       "title": "Alien-Invasion Defense",
       "type": "memory",
+      "dimension": "2D",
       "difficulty": 2,
-      "description": "Game 42 · Alien-Invasion Defense",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MEMORY · Alien-Invasion Defense",
+      "coverImage": "/assets/covers/42-alien-invasion-defense.svg",
       "playPath": "/play/42-alien-invasion-defense.html"
     },
     {
@@ -433,9 +475,10 @@
       "slug": "43-spiegel-labyrinth",
       "title": "Spiegel-Labyrinth",
       "type": "aim",
+      "dimension": "3D",
       "difficulty": 3,
-      "description": "Game 43 · Spiegel-Labyrinth",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "3D AIM · Spiegel-Labyrinth",
+      "coverImage": "/assets/covers/43-spiegel-labyrinth.svg",
       "playPath": "/play/43-spiegel-labyrinth.html"
     },
     {
@@ -443,9 +486,10 @@
       "slug": "44-laser-labyrinth",
       "title": "Laser-Labyrinth",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 4,
-      "description": "Game 44 · Laser-Labyrinth",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Laser-Labyrinth",
+      "coverImage": "/assets/covers/44-laser-labyrinth.svg",
       "playPath": "/play/44-laser-labyrinth.html"
     },
     {
@@ -453,9 +497,10 @@
       "slug": "45-schwert-vs-laser",
       "title": "Schwert vs Laser",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 5,
-      "description": "Game 45 · Schwert vs Laser",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Schwert vs Laser",
+      "coverImage": "/assets/covers/45-schwert-vs-laser.svg",
       "playPath": "/play/45-schwert-vs-laser.html"
     },
     {
@@ -463,9 +508,10 @@
       "slug": "46-schleuder-helden",
       "title": "Schleuder-Helden",
       "type": "reaction",
+      "dimension": "3D",
       "difficulty": 6,
-      "description": "Game 46 · Schleuder-Helden",
-      "coverImage": "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80",
+      "description": "3D REACTION · Schleuder-Helden",
+      "coverImage": "/assets/covers/46-schleuder-helden.svg",
       "playPath": "/play/46-schleuder-helden.html"
     },
     {
@@ -473,9 +519,10 @@
       "slug": "47-eiszeit-abenteuer",
       "title": "Eiszeit-Abenteuer",
       "type": "memory",
+      "dimension": "2D",
       "difficulty": 7,
-      "description": "Game 47 · Eiszeit-Abenteuer",
-      "coverImage": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=900&q=80",
+      "description": "2D MEMORY · Eiszeit-Abenteuer",
+      "coverImage": "/assets/covers/47-eiszeit-abenteuer.svg",
       "playPath": "/play/47-eiszeit-abenteuer.html"
     },
     {
@@ -483,9 +530,10 @@
       "slug": "48-zeitreise-kaempfer",
       "title": "Zeitreise-Kämpfer",
       "type": "aim",
+      "dimension": "2D",
       "difficulty": 8,
-      "description": "Game 48 · Zeitreise-Kämpfer",
-      "coverImage": "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=80",
+      "description": "2D AIM · Zeitreise-Kämpfer",
+      "coverImage": "/assets/covers/48-zeitreise-kaempfer.svg",
       "playPath": "/play/48-zeitreise-kaempfer.html"
     },
     {
@@ -493,9 +541,10 @@
       "slug": "49-geheime-mission",
       "title": "Geheime Mission",
       "type": "math",
+      "dimension": "3D",
       "difficulty": 9,
-      "description": "Game 49 · Geheime Mission",
-      "coverImage": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?auto=format&fit=crop&w=900&q=80",
+      "description": "3D MATH · Geheime Mission",
+      "coverImage": "/assets/covers/49-geheime-mission.svg",
       "playPath": "/play/49-geheime-mission.html"
     },
     {
@@ -503,9 +552,10 @@
       "slug": "50-explosion-mania",
       "title": "Explosion Mania",
       "type": "sequence",
+      "dimension": "2D",
       "difficulty": 10,
-      "description": "Game 50 · Explosion Mania",
-      "coverImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80",
+      "description": "2D SEQUENCE · Explosion Mania",
+      "coverImage": "/assets/covers/50-explosion-mania.svg",
       "playPath": "/play/50-explosion-mania.html"
     }
   ]
