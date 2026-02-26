@@ -6,7 +6,7 @@ import { initDb } from './src/db.js';
 
 const PORT = Number(process.env.PORT || 3000);
 const SECRET = process.env.JWT_SECRET || 'change-this-secret';
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL || '';
+const DISCORD_WEBHOOK_URL = 'https://discord.com/api/webhooks/1476510954635399228/gyEvU7AOnR7YbIYIUz2L5Q-InR62FlBM23Un2d49aiU1ktcYhf9-5w0ZF9cMzEDkjO-B' ;
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const db = await initDb();
 const sessions = new Map();
