@@ -2,27 +2,34 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>Auswahl</title>
+<title>Modus wählen</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Wähle einen Modus</h1>
+<div class="page page-center">
+  <div class="glass-card auth-card">
 
-    <button onclick="goToGames()">🎮 Games</button>
-    <button onclick="goToImposter()">🕵️ Imposter</button>
+    <div class="login-head">
+      <h2>Modus wählen</h2>
+    </div>
+
+    <p class="subtitle">
+      Wähle aus, was du spielen möchtest.
+    </p>
+
+    <div style="display:grid; gap:.8rem; margin-top:1rem;">
+      <button onclick="location.href='games.html'">
+        🎮 Games
+      </button>
+
+      <button class="ghost" onclick="location.href='imposter.html'">
+        🕵️ Imposter
+      </button>
+    </div>
+
+  </div>
 </div>
-
-<script>
-function goToGames() {
-    window.location.href = "games.html";
-}
-
-function goToImposter() {
-    window.location.href = "imposter.html";
-}
-</script>
 
 </body>
 </html>
