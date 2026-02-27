@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fufi'Hub - Games</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="glass-card header">
+        <div class="header-left">
+          <a class="dc-btn" href="https://discord.gg/gwryX3dbkt" target="_blank" rel="noopener noreferrer">DC Server</a>
+          <div>
+            <h1>Fufi'Hub</h1>
+            <p id="userInfo">Willkommen bei Fufi'Hub Games.</p>
+          </div>
+        </div>
+        <button id="logoutBtn" class="ghost">Logout</button>
+      </header>
+
+      <section class="glass-card">
+        <div class="section-header">
+          <h2>Neue 50 Games · 2D & 3D</h2>
+          <input id="search" type="search" placeholder="Spiel suchen..." />
+        </div>
+        <div id="gameCount" class="game-count"></div>
+        <div id="gamesGrid" class="games-grid"></div>
+      </section>
+    </main>
+    <script type="module" src="games.js"></script>
+  </body>
+</html>
