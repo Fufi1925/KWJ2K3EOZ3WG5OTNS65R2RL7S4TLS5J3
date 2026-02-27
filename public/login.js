@@ -27,7 +27,7 @@ form.addEventListener('submit', async (event) => {
     return;
   }
 
-  window.location.href = '/games.html';
+  window.location.href = '/choose.html';
 });
 
 checkSession();
