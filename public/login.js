@@ -3,7 +3,7 @@ const message = document.getElementById('message');
 
 async function checkSession() {
   const response = await fetch('/api/me');
-  if (response.ok) window.location.href = '/games.html';
+  if (response.ok) window.location.href = '/choose.html';
 }
 
 form.addEventListener('submit', async (event) => {
