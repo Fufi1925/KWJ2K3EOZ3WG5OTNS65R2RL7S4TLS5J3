@@ -7,19 +7,34 @@
 </head>
 <body>
 
-<div class="container">
+<div class="page">
 
-<h1>Imposter Game</h1>
+  <div class="header">
+    <div class="header-left">
+      <h2>🕵️ Imposter</h2>
+    </div>
+    <button class="ghost" onclick="location.href='choose.html'">
+      Zurück
+    </button>
+  </div>
 
-<div id="setup">
-    <label>Wie viele Spieler?</label>
+  <div class="glass-card" id="setupCard">
+
+    <div class="section-header">
+      <h3>Spiel starten</h3>
+    </div>
+
+    <p class="subtitle">
+      Wie viele Spieler spielen mit?
+    </p>
+
     <input type="number" id="playerCount" min="3" max="20">
     <button onclick="createInputs()">Weiter</button>
-</div>
 
-<div id="nameInputs"></div>
+    <div id="nameInputs" style="margin-top:1rem;"></div>
+  </div>
 
-<div id="gameArea" style="display:none;"></div>
+  <div class="glass-card" id="gameCard" style="display:none;"></div>
 
 </div>
 
