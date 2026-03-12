@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fufi'Hub - Anmeldung</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page page-center">
+      <section class="glass-card auth-card login-hero">
+        <div class="login-head">
+          <h1>Fufi'Hub</h1>
+          <a class="dc-login-btn" href="https://discord.gg/gwryX3dbkt" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+        <p class="subtitle">Melde dich an wenn du ein acc erhalten hast.Bei Promlemen test oder bugs im discord melden.</p>
+
+        <form id="authForm" novalidate>
+          <div class="field floating">
+            <input id="username" name="username" type="text" placeholder=" " required />
+            <label for="username">Benutzername</label>
+          </div>
+
+          <div class="field floating">
+            <input id="password" name="password" type="password" placeholder=" " required />
+            <label for="password">Passwort</label>
+          </div>
+
+          <button id="submitBtn" type="submit">Anmelden</button>
+          <p id="message" class="message"></p>
+        </form>
+
+        <p class="madeby">Made by L</p>
+      </section>
+    </main>
+    <script type="module" src="login.js"></script>
+  </body>
+</html>

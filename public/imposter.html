@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Imposter</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <div class="header-left">
+      <h2>🕵️ Imposter</h2>
+    </div>
+    <button class="ghost" onclick="location.href='choose.html'">
+      Zurück
+    </button>
+  </div>
+
+  <div class="glass-card" id="setupCard">
+
+    <div class="section-header">
+      <h3>Spiel starten</h3>
+    </div>
+
+    <p class="subtitle">
+      Wie viele Spieler spielen mit?
+    </p>
+
+    <input type="number" id="playerCount" min="3" max="20">
+    <button onclick="createInputs()">Weiter</button>
+
+    <div id="nameInputs" style="margin-top:1rem;"></div>
+  </div>
+
+  <div class="glass-card" id="gameCard" style="display:none;"></div>
+
+</div>
+
+<script src="imposter.js"></script>
+</body>
+</html>
